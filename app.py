@@ -413,30 +413,40 @@ def fmt_dollars(x):
 
 # ── Chart Builders ────────────────────────────────────────────────────────────
 
+# ── Hoodie Analytics brand palette ───────────────────────────────────────────
+HOODIE_NAVY  = "#1B2D6B"   # primary navy
+HOODIE_GREEN = "#5DC4A0"   # mint green
+HOODIE_BLUE  = "#2E86AB"   # secondary blue (structural model)
+HOODIE_LIGHT = "#A8D8EA"   # light blue (expected line)
+
 COLORS = {
-    "actual":    "#2196F3",
-    "growth":    "#4CAF50",
-    "structural": "#FF9800",
-    "expected":  "#FFB74D",
+    "actual":     HOODIE_NAVY,
+    "growth":     HOODIE_GREEN,
+    "structural": HOODIE_BLUE,
+    "expected":   HOODIE_LIGHT,
 }
 
 CATEGORY_COLORS = {
-    "Flower":       "#4CAF50",
-    "Vapes":        "#2196F3",
-    "Pre-Rolls":    "#FF9800",
-    "Edibles":      "#9C27B0",
-    "Concentrates": "#F44336",
+    "Flower":       HOODIE_GREEN,
+    "Vapes":        HOODIE_NAVY,
+    "Pre-Rolls":    "#F4A261",
+    "Edibles":      "#9C6FBF",
+    "Concentrates": "#E76F51",
     "Other":        "#9E9E9E",
 }
 
 CHART_FONT = dict(
     font_size=18,
+    font_color=HOODIE_NAVY,
     xaxis_tickfont_size=16,
     xaxis_title_font_size=18,
     yaxis_tickfont_size=16,
     yaxis_title_font_size=18,
     legend_font_size=16,
     title_font_size=20,
+    title_font_color=HOODIE_NAVY,
+    paper_bgcolor="#FFFFFF",
+    plot_bgcolor="#FFFFFF",
 )
 
 
@@ -532,6 +542,8 @@ def make_category_stacked_bar(state, df_cat, proj_g):
         hovermode="x unified",
         height=460,
         template="plotly_white",
+        xaxis_gridcolor="#E8EDF5",
+        yaxis_gridcolor="#E8EDF5",
         margin=dict(t=60, b=160),
         **CHART_FONT,
     )
@@ -621,6 +633,8 @@ def make_structural_bar_chart(state, hist_s, proj_s):
         hovermode="x unified",
         height=460,
         template="plotly_white",
+        xaxis_gridcolor="#E8EDF5",
+        yaxis_gridcolor="#E8EDF5",
         margin=dict(t=60, b=160),
         **CHART_FONT,
     )
@@ -693,7 +707,9 @@ def make_all_states_chart(df_summary, year_col):
         title=f"Projected TTM Sales by State ({year_col})",
         xaxis_title="TTM Sales ($M)", yaxis_title="",
         height=max(400, len(df_plot) * 22),
-        template="plotly_white", margin=dict(l=160),
+        template="plotly_white",
+        xaxis_gridcolor="#E8EDF5",
+        yaxis_gridcolor="#E8EDF5", margin=dict(l=160),
         **CHART_FONT,
     )
     return fig
@@ -849,7 +865,114 @@ def compute_all_states(
 # ── Main App ──────────────────────────────────────────────────────────────────
 
 def main():
-    st.title("Cannabis Market Estimates")
+    # ── Global CSS / brand styling ────────────────────────────────────────────
+    st.markdown("""
+        <style>
+        /* ── Page background ── */
+        .stApp { background-color: #FFFFFF; }
+
+        /* ── Sidebar ── */
+        section[data-testid="stSidebar"] {
+            background-color: #F0F5F9;
+            border-right: 2px solid #1B2D6B22;
+        }
+        section[data-testid="stSidebar"] h1,
+        section[data-testid="stSidebar"] h2,
+        section[data-testid="stSidebar"] h3,
+        section[data-testid="stSidebar"] label,
+        section[data-testid="stSidebar"] .stMarkdown p {
+            color: #1B2D6B !important;
+        }
+
+        /* ── Page header ── */
+        .hoodie-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding-bottom: 6px;
+            border-bottom: 3px solid #5DC4A0;
+            margin-bottom: 18px;
+        }
+        .hoodie-header h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #1B2D6B;
+            margin: 0;
+        }
+        .hoodie-header span.sub {
+            font-size: 0.95rem;
+            color: #5DC4A0;
+            font-weight: 500;
+        }
+
+        /* ── Metric cards ── */
+        div[data-testid="metric-container"] {
+            background: #F0F5F9;
+            border: 1px solid #1B2D6B22;
+            border-left: 4px solid #5DC4A0;
+            border-radius: 8px;
+            padding: 10px 16px;
+        }
+        div[data-testid="metric-container"] label {
+            color: #1B2D6B !important;
+            font-weight: 600;
+        }
+        div[data-testid="metric-container"] [data-testid="stMetricValue"] {
+            color: #1B2D6B !important;
+            font-size: 1.6rem;
+        }
+
+        /* ── Tabs ── */
+        .stTabs [data-baseweb="tab"] {
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 10px 28px;
+            color: #1B2D6B;
+        }
+        .stTabs [aria-selected="true"] {
+            border-bottom: 3px solid #5DC4A0 !important;
+            color: #1B2D6B !important;
+        }
+
+        /* ── Buttons ── */
+        .stButton > button {
+            background-color: #1B2D6B;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        .stButton > button:hover {
+            background-color: #5DC4A0;
+            color: white;
+        }
+
+        /* ── Download button ── */
+        .stDownloadButton > button {
+            background-color: #5DC4A0;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        /* ── Expander header ── */
+        .streamlit-expanderHeader {
+            font-weight: 600;
+            color: #1B2D6B !important;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+    # ── Branded header ────────────────────────────────────────────────────────
+    st.markdown("""
+        <div class="hoodie-header">
+            <div>
+                <h1>Cannabis Market Estimates</h1>
+                <span class="sub">Powered by Hoodie Analytics</span>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
 
     with st.spinner("Loading data & training models…"):
         df_raw            = load_base_data()
@@ -864,12 +987,6 @@ def main():
     all_state_defaults = compute_all_state_defaults(df_raw)
 
     state, model_choice, params = render_sidebar(all_state_defaults)
-
-    st.markdown("""
-        <style>
-        .stTabs [data-baseweb="tab"] { font-size: 1.1rem; font-weight: 600; padding: 10px 24px; }
-        </style>
-    """, unsafe_allow_html=True)
     tab_state, tab_all = st.tabs(["State View", "All States"])
 
     # ── Tab 1: Single State ───────────────────────────────────────────────────
