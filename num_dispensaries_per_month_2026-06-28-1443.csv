@@ -1,0 +1,2366 @@
+STATE,SALES_MONTH,COUNT(DISTINCT( MASTER_ID))
+Oklahoma,2022-09-01,1802
+California,2022-09-01,1528
+Connecticut,2022-09-01,21
+Utah,2022-09-01,17
+Nunavut,2022-09-01,2
+Alberta,2022-09-01,752
+New Jersey,2022-09-01,33
+Hawaii,2022-09-01,19
+Iowa,2022-09-01,5
+North Dakota,2022-09-01,8
+Nevada,2022-09-01,109
+British Columbia,2022-09-01,438
+Vermont,2022-09-01,11
+Colorado,2022-09-01,747
+Arkansas,2022-09-01,41
+South Dakota,2022-09-01,11
+Montana,2022-09-01,352
+South Carolina,2022-09-01,1
+Washington,2022-09-01,480
+Minnesota,2022-09-01,12
+New York,2022-09-01,82
+Nova Scotia,2022-09-01,12
+Puerto Rico,2022-09-01,229
+Virginia,2022-09-01,13
+Arizona,2022-09-01,147
+Missouri,2022-09-01,190
+Saskatchewan,2022-09-01,104
+Yukon,2022-09-01,5
+New Brunswick,2022-09-01,31
+New Mexico,2022-09-01,329
+Oregon,2022-09-01,761
+New Hampshire,2022-09-01,7
+West Virginia,2022-09-01,41
+Texas,2022-09-01,7
+Newfoundland and Labrador,2022-09-01,40
+Illinois,2022-09-01,112
+Massachusetts,2022-09-01,310
+District of Columbia,2022-09-01,18
+Ontario,2022-09-01,1573
+Maryland,2022-09-01,110
+Florida,2022-09-01,527
+Louisiana,2022-09-01,10
+Rhode Island,2022-09-01,4
+Mississippi,2022-09-01,5
+Michigan,2022-09-01,639
+Delaware,2022-09-01,9
+Manitoba,2022-09-01,101
+Pennsylvania,2022-09-01,169
+Ohio,2022-09-01,64
+Maine,2022-09-01,274
+Northern Mariana Islands,2022-09-01,1
+Alaska,2022-09-01,161
+Texas,2022-10-01,7
+Nova Scotia,2022-10-01,12
+Ontario,2022-10-01,1595
+Montana,2022-10-01,356
+Colorado,2022-10-01,743
+West Virginia,2022-10-01,44
+North Dakota,2022-10-01,8
+Utah,2022-10-01,17
+South Carolina,2022-10-01,1
+Arizona,2022-10-01,152
+Maine,2022-10-01,278
+Nunavut,2022-10-01,2
+Ohio,2022-10-01,65
+Michigan,2022-10-01,649
+Virginia,2022-10-01,14
+Vermont,2022-10-01,22
+British Columbia,2022-10-01,439
+Oklahoma,2022-10-01,1822
+Puerto Rico,2022-10-01,233
+Mississippi,2022-10-01,7
+New York,2022-10-01,83
+Massachusetts,2022-10-01,317
+Manitoba,2022-10-01,103
+Missouri,2022-10-01,194
+Arkansas,2022-10-01,41
+Iowa,2022-10-01,5
+Yukon,2022-10-01,6
+District of Columbia,2022-10-01,21
+Saskatchewan,2022-10-01,106
+Washington,2022-10-01,479
+New Brunswick,2022-10-01,33
+South Dakota,2022-10-01,21
+Northern Mariana Islands,2022-10-01,1
+Connecticut,2022-10-01,21
+California,2022-10-01,1551
+Minnesota,2022-10-01,12
+Delaware,2022-10-01,9
+Alaska,2022-10-01,161
+Pennsylvania,2022-10-01,171
+Illinois,2022-10-01,110
+Oregon,2022-10-01,763
+Maryland,2022-10-01,112
+Newfoundland and Labrador,2022-10-01,42
+New Jersey,2022-10-01,36
+Louisiana,2022-10-01,10
+Alberta,2022-10-01,766
+Rhode Island,2022-10-01,5
+New Hampshire,2022-10-01,7
+Nevada,2022-10-01,109
+Florida,2022-10-01,530
+New Mexico,2022-10-01,350
+Hawaii,2022-10-01,19
+Washington,2022-11-01,476
+South Dakota,2022-11-01,31
+Massachusetts,2022-11-01,327
+Arkansas,2022-11-01,41
+Illinois,2022-11-01,115
+Connecticut,2022-11-01,21
+Manitoba,2022-11-01,102
+Maryland,2022-11-01,113
+Texas,2022-11-01,7
+Michigan,2022-11-01,667
+Oregon,2022-11-01,762
+New Hampshire,2022-11-01,7
+Nunavut,2022-11-01,2
+Ontario,2022-11-01,1594
+Saskatchewan,2022-11-01,105
+Northern Mariana Islands,2022-11-01,1
+South Carolina,2022-11-01,1
+Minnesota,2022-11-01,12
+New Jersey,2022-11-01,40
+Louisiana,2022-11-01,10
+West Virginia,2022-11-01,49
+Nova Scotia,2022-11-01,12
+Iowa,2022-11-01,5
+Arizona,2022-11-01,158
+British Columbia,2022-11-01,438
+Utah,2022-11-01,17
+Alaska,2022-11-01,161
+New York,2022-11-01,83
+Oklahoma,2022-11-01,1849
+Rhode Island,2022-11-01,5
+Missouri,2022-11-01,195
+Colorado,2022-11-01,741
+Pennsylvania,2022-11-01,174
+Delaware,2022-11-01,10
+Hawaii,2022-11-01,20
+Mississippi,2022-11-01,25
+Montana,2022-11-01,368
+Maine,2022-11-01,284
+New Mexico,2022-11-01,403
+Yukon,2022-11-01,6
+California,2022-11-01,1571
+Florida,2022-11-01,558
+Vermont,2022-11-01,34
+Ohio,2022-11-01,68
+Virginia,2022-11-01,14
+District of Columbia,2022-11-01,21
+North Dakota,2022-11-01,8
+Newfoundland and Labrador,2022-11-01,43
+Puerto Rico,2022-11-01,258
+Nevada,2022-11-01,110
+New Brunswick,2022-11-01,33
+Alberta,2022-11-01,720
+Nevada,2022-12-01,110
+Maine,2022-12-01,283
+Connecticut,2022-12-01,21
+Michigan,2022-12-01,675
+Missouri,2022-12-01,196
+District of Columbia,2022-12-01,21
+Delaware,2022-12-01,10
+Alberta,2022-12-01,717
+Texas,2022-12-01,8
+North Dakota,2022-12-01,8
+Northern Mariana Islands,2022-12-01,1
+Iowa,2022-12-01,5
+Utah,2022-12-01,17
+California,2022-12-01,1586
+Maryland,2022-12-01,112
+New Jersey,2022-12-01,46
+Manitoba,2022-12-01,98
+Arizona,2022-12-01,159
+Saskatchewan,2022-12-01,106
+Minnesota,2022-12-01,12
+Pennsylvania,2022-12-01,174
+Rhode Island,2022-12-01,7
+Ohio,2022-12-01,72
+British Columbia,2022-12-01,424
+Alaska,2022-12-01,162
+Arkansas,2022-12-01,41
+Montana,2022-12-01,371
+West Virginia,2022-12-01,49
+South Carolina,2022-12-01,1
+Louisiana,2022-12-01,10
+Newfoundland and Labrador,2022-12-01,43
+New York,2022-12-01,85
+New Brunswick,2022-12-01,33
+Nunavut,2022-12-01,2
+Oregon,2022-12-01,747
+Massachusetts,2022-12-01,332
+Washington,2022-12-01,468
+Puerto Rico,2022-12-01,264
+Vermont,2022-12-01,43
+Hawaii,2022-12-01,21
+Nova Scotia,2022-12-01,12
+Virginia,2022-12-01,18
+Oklahoma,2022-12-01,1850
+Yukon,2022-12-01,6
+South Dakota,2022-12-01,40
+Mississippi,2022-12-01,30
+New Hampshire,2022-12-01,7
+Illinois,2022-12-01,116
+Florida,2022-12-01,574
+Colorado,2022-12-01,741
+New Mexico,2022-12-01,430
+Ontario,2022-12-01,1613
+Colorado,2023-01-01,745
+South Dakota,2023-01-01,44
+Montana,2023-01-01,374
+New Brunswick,2023-01-01,33
+Michigan,2023-01-01,691
+Ohio,2023-01-01,79
+Pennsylvania,2023-01-01,175
+Yukon,2023-01-01,6
+Northern Mariana Islands,2023-01-01,1
+Manitoba,2023-01-01,99
+Maryland,2023-01-01,98
+New Mexico,2023-01-01,454
+Iowa,2023-01-01,5
+Minnesota,2023-01-01,12
+Connecticut,2023-01-01,25
+Arkansas,2023-01-01,40
+Puerto Rico,2023-01-01,264
+Alaska,2023-01-01,166
+Nova Scotia,2023-01-01,12
+Massachusetts,2023-01-01,334
+North Dakota,2023-01-01,8
+Arizona,2023-01-01,161
+Oklahoma,2023-01-01,1784
+Maine,2023-01-01,277
+Washington,2023-01-01,470
+Virginia,2023-01-01,19
+Newfoundland and Labrador,2023-01-01,43
+West Virginia,2023-01-01,51
+New York,2023-01-01,89
+District of Columbia,2023-01-01,21
+Illinois,2023-01-01,122
+Nunavut,2023-01-01,2
+Alberta,2023-01-01,719
+Florida,2023-01-01,576
+California,2023-01-01,1614
+South Carolina,2023-01-01,1
+Hawaii,2023-01-01,21
+British Columbia,2023-01-01,428
+Mississippi,2023-01-01,41
+Ontario,2023-01-01,1625
+Louisiana,2023-01-01,10
+New Hampshire,2023-01-01,7
+Missouri,2023-01-01,199
+Texas,2023-01-01,8
+Nevada,2023-01-01,110
+Oregon,2023-01-01,747
+Utah,2023-01-01,18
+New Jersey,2023-01-01,47
+Saskatchewan,2023-01-01,105
+Vermont,2023-01-01,48
+Rhode Island,2023-01-01,7
+Delaware,2023-01-01,11
+Illinois,2023-02-01,127
+South Carolina,2023-02-01,1
+Louisiana,2023-02-01,11
+Ontario,2023-02-01,1641
+British Columbia,2023-02-01,430
+Ohio,2023-02-01,83
+Nova Scotia,2023-02-01,12
+Colorado,2023-02-01,745
+California,2023-02-01,1617
+New Mexico,2023-02-01,471
+Nunavut,2023-02-01,2
+Alberta,2023-02-01,720
+Nevada,2023-02-01,110
+Hawaii,2023-02-01,21
+New Hampshire,2023-02-01,7
+North Dakota,2023-02-01,8
+Massachusetts,2023-02-01,337
+Utah,2023-02-01,18
+Oklahoma,2023-02-01,1705
+Northern Mariana Islands,2023-02-01,1
+Manitoba,2023-02-01,100
+Maine,2023-02-01,249
+Vermont,2023-02-01,50
+Minnesota,2023-02-01,12
+Michigan,2023-02-01,699
+Pennsylvania,2023-02-01,176
+Delaware,2023-02-01,11
+Virginia,2023-02-01,19
+Rhode Island,2023-02-01,7
+Iowa,2023-02-01,5
+Florida,2023-02-01,585
+District of Columbia,2023-02-01,20
+Yukon,2023-02-01,6
+Maryland,2023-02-01,98
+New York,2023-02-01,94
+Washington,2023-02-01,472
+Texas,2023-02-01,8
+New Jersey,2023-02-01,48
+South Dakota,2023-02-01,45
+Saskatchewan,2023-02-01,105
+Alaska,2023-02-01,168
+Newfoundland and Labrador,2023-02-01,42
+Oregon,2023-02-01,748
+New Brunswick,2023-02-01,33
+Arizona,2023-02-01,162
+Arkansas,2023-02-01,40
+Mississippi,2023-02-01,59
+Montana,2023-02-01,383
+Connecticut,2023-02-01,25
+Missouri,2023-02-01,199
+Puerto Rico,2023-02-01,268
+West Virginia,2023-02-01,51
+Ontario,2023-03-01,1656
+Northern Mariana Islands,2023-03-01,1
+Alberta,2023-03-01,757
+Maryland,2023-03-01,98
+District of Columbia,2023-03-01,20
+Newfoundland and Labrador,2023-03-01,42
+Massachusetts,2023-03-01,339
+Vermont,2023-03-01,55
+Pennsylvania,2023-03-01,180
+Rhode Island,2023-03-01,7
+Yukon,2023-03-01,6
+Puerto Rico,2023-03-01,266
+Missouri,2023-03-01,197
+Maine,2023-03-01,248
+Louisiana,2023-03-01,11
+West Virginia,2023-03-01,53
+Montana,2023-03-01,386
+British Columbia,2023-03-01,433
+Nevada,2023-03-01,111
+New Hampshire,2023-03-01,7
+Hawaii,2023-03-01,22
+South Dakota,2023-03-01,46
+Mississippi,2023-03-01,78
+Florida,2023-03-01,600
+Texas,2023-03-01,9
+Oklahoma,2023-03-01,1648
+Arkansas,2023-03-01,40
+Utah,2023-03-01,18
+Virginia,2023-03-01,20
+Connecticut,2023-03-01,25
+Nunavut,2023-03-01,2
+Washington,2023-03-01,472
+Arizona,2023-03-01,161
+New Mexico,2023-03-01,489
+North Dakota,2023-03-01,8
+Saskatchewan,2023-03-01,105
+Ohio,2023-03-01,90
+Illinois,2023-03-01,128
+Minnesota,2023-03-01,13
+Colorado,2023-03-01,746
+Iowa,2023-03-01,5
+Delaware,2023-03-01,11
+Oregon,2023-03-01,752
+Michigan,2023-03-01,705
+Manitoba,2023-03-01,101
+South Carolina,2023-03-01,1
+Alaska,2023-03-01,168
+New Brunswick,2023-03-01,33
+New Jersey,2023-03-01,51
+New York,2023-03-01,97
+California,2023-03-01,1625
+Nova Scotia,2023-03-01,12
+Rhode Island,2023-04-01,7
+Oklahoma,2023-04-01,1614
+Nevada,2023-04-01,111
+New Jersey,2023-04-01,57
+Texas,2023-04-01,9
+New Brunswick,2023-04-01,33
+Utah,2023-04-01,18
+Missouri,2023-04-01,198
+Arkansas,2023-04-01,40
+Nunavut,2023-04-01,2
+Northern Mariana Islands,2023-04-01,1
+Ohio,2023-04-01,93
+Louisiana,2023-04-01,11
+Virginia,2023-04-01,20
+Alaska,2023-04-01,162
+Arizona,2023-04-01,164
+Connecticut,2023-04-01,25
+Nova Scotia,2023-04-01,12
+Delaware,2023-04-01,11
+Florida,2023-04-01,601
+Illinois,2023-04-01,130
+Colorado,2023-04-01,740
+North Dakota,2023-04-01,8
+Maryland,2023-04-01,99
+Vermont,2023-04-01,59
+Manitoba,2023-04-01,101
+New York,2023-04-01,102
+South Carolina,2023-04-01,1
+Oregon,2023-04-01,750
+Pennsylvania,2023-04-01,181
+Newfoundland and Labrador,2023-04-01,41
+Mississippi,2023-04-01,95
+Maine,2023-04-01,246
+Montana,2023-04-01,390
+New Mexico,2023-04-01,504
+District of Columbia,2023-04-01,20
+Iowa,2023-04-01,5
+Massachusetts,2023-04-01,339
+Michigan,2023-04-01,717
+South Dakota,2023-04-01,46
+Ontario,2023-04-01,1651
+Alberta,2023-04-01,739
+Yukon,2023-04-01,6
+California,2023-04-01,1640
+British Columbia,2023-04-01,431
+Puerto Rico,2023-04-01,266
+West Virginia,2023-04-01,56
+Hawaii,2023-04-01,22
+Washington,2023-04-01,474
+New Hampshire,2023-04-01,7
+Minnesota,2023-04-01,13
+Saskatchewan,2023-04-01,106
+Colorado,2023-05-01,742
+Iowa,2023-05-01,5
+New Jersey,2023-05-01,60
+New York,2023-05-01,104
+Michigan,2023-05-01,718
+Rhode Island,2023-05-01,7
+Saskatchewan,2023-05-01,106
+Alaska,2023-05-01,164
+Nova Scotia,2023-05-01,12
+Maine,2023-05-01,243
+Washington,2023-05-01,473
+Yukon,2023-05-01,6
+District of Columbia,2023-05-01,20
+Northern Mariana Islands,2023-05-01,1
+South Carolina,2023-05-01,1
+Ohio,2023-05-01,95
+Florida,2023-05-01,605
+Connecticut,2023-05-01,25
+Alberta,2023-05-01,741
+Minnesota,2023-05-01,13
+Oregon,2023-05-01,750
+Mississippi,2023-05-01,95
+Nevada,2023-05-01,111
+Illinois,2023-05-01,134
+Utah,2023-05-01,18
+Maryland,2023-05-01,99
+New Mexico,2023-05-01,512
+Nunavut,2023-05-01,2
+Missouri,2023-05-01,197
+Manitoba,2023-05-01,101
+Delaware,2023-05-01,11
+Vermont,2023-05-01,59
+West Virginia,2023-05-01,57
+South Dakota,2023-05-01,47
+Massachusetts,2023-05-01,340
+Arkansas,2023-05-01,40
+Montana,2023-05-01,357
+North Dakota,2023-05-01,8
+British Columbia,2023-05-01,430
+Georgia,2023-05-01,2
+Virginia,2023-05-01,20
+Oklahoma,2023-05-01,1612
+California,2023-05-01,1652
+Louisiana,2023-05-01,11
+Hawaii,2023-05-01,21
+Newfoundland and Labrador,2023-05-01,41
+Ontario,2023-05-01,1653
+New Brunswick,2023-05-01,33
+Pennsylvania,2023-05-01,183
+New Hampshire,2023-05-01,7
+Puerto Rico,2023-05-01,269
+Arizona,2023-05-01,165
+Texas,2023-05-01,9
+South Carolina,2023-06-01,1
+North Dakota,2023-06-01,8
+New Mexico,2023-06-01,521
+Georgia,2023-06-01,2
+Rhode Island,2023-06-01,7
+Colorado,2023-06-01,744
+New York,2023-06-01,106
+Ontario,2023-06-01,1658
+Oklahoma,2023-06-01,1603
+West Virginia,2023-06-01,57
+New Jersey,2023-06-01,64
+California,2023-06-01,1639
+Utah,2023-06-01,18
+British Columbia,2023-06-01,431
+Maine,2023-06-01,237
+Louisiana,2023-06-01,11
+Ohio,2023-06-01,98
+Nevada,2023-06-01,113
+Minnesota,2023-06-01,13
+Delaware,2023-06-01,12
+Saskatchewan,2023-06-01,106
+Newfoundland and Labrador,2023-06-01,41
+Maryland,2023-06-01,100
+Illinois,2023-06-01,140
+Texas,2023-06-01,9
+Michigan,2023-06-01,729
+Iowa,2023-06-01,5
+Yukon,2023-06-01,6
+Pennsylvania,2023-06-01,183
+Hawaii,2023-06-01,21
+Missouri,2023-06-01,197
+New Brunswick,2023-06-01,34
+Alaska,2023-06-01,164
+Nova Scotia,2023-06-01,12
+Arizona,2023-06-01,165
+Vermont,2023-06-01,59
+Arkansas,2023-06-01,40
+Virginia,2023-06-01,20
+Nunavut,2023-06-01,2
+Northern Mariana Islands,2023-06-01,1
+Washington,2023-06-01,473
+District of Columbia,2023-06-01,20
+Montana,2023-06-01,354
+Manitoba,2023-06-01,101
+Connecticut,2023-06-01,25
+Florida,2023-06-01,611
+Oregon,2023-06-01,750
+South Dakota,2023-06-01,48
+Mississippi,2023-06-01,98
+Puerto Rico,2023-06-01,273
+Massachusetts,2023-06-01,342
+New Hampshire,2023-06-01,7
+Alberta,2023-06-01,739
+Michigan,2023-07-01,741
+Louisiana,2023-07-01,11
+New Brunswick,2023-07-01,34
+Utah,2023-07-01,18
+Iowa,2023-07-01,5
+Oregon,2023-07-01,749
+Connecticut,2023-07-01,26
+Nunavut,2023-07-01,2
+Massachusetts,2023-07-01,346
+Oklahoma,2023-07-01,1562
+Hawaii,2023-07-01,22
+Alaska,2023-07-01,163
+South Dakota,2023-07-01,51
+District of Columbia,2023-07-01,20
+Georgia,2023-07-01,4
+California,2023-07-01,1690
+Puerto Rico,2023-07-01,273
+Newfoundland and Labrador,2023-07-01,41
+New Mexico,2023-07-01,540
+Alberta,2023-07-01,735
+Florida,2023-07-01,616
+New Hampshire,2023-07-01,7
+Colorado,2023-07-01,740
+Arkansas,2023-07-01,40
+Mississippi,2023-07-01,107
+Manitoba,2023-07-01,101
+Ontario,2023-07-01,1659
+Maine,2023-07-01,231
+Texas,2023-07-01,9
+Rhode Island,2023-07-01,7
+Maryland,2023-07-01,102
+Ohio,2023-07-01,101
+Washington,2023-07-01,473
+South Carolina,2023-07-01,1
+Nevada,2023-07-01,113
+Yukon,2023-07-01,6
+West Virginia,2023-07-01,57
+Nova Scotia,2023-07-01,12
+Delaware,2023-07-01,12
+New Jersey,2023-07-01,66
+Northern Mariana Islands,2023-07-01,1
+Missouri,2023-07-01,198
+Virginia,2023-07-01,22
+Pennsylvania,2023-07-01,183
+Illinois,2023-07-01,148
+North Dakota,2023-07-01,8
+Vermont,2023-07-01,60
+Arizona,2023-07-01,167
+Saskatchewan,2023-07-01,106
+New York,2023-07-01,113
+British Columbia,2023-07-01,432
+Minnesota,2023-07-01,13
+Montana,2023-07-01,368
+Missouri,2023-08-01,199
+Saskatchewan,2023-08-01,106
+Connecticut,2023-08-01,27
+Northern Mariana Islands,2023-08-01,1
+Vermont,2023-08-01,62
+Washington,2023-08-01,471
+Nunavut,2023-08-01,2
+Texas,2023-08-01,9
+California,2023-08-01,1688
+West Virginia,2023-08-01,57
+British Columbia,2023-08-01,429
+Mississippi,2023-08-01,114
+Ohio,2023-08-01,108
+South Carolina,2023-08-01,1
+Alberta,2023-08-01,734
+Minnesota,2023-08-01,13
+Hawaii,2023-08-01,23
+Michigan,2023-08-01,745
+Arizona,2023-08-01,169
+Oregon,2023-08-01,750
+New Jersey,2023-08-01,73
+Puerto Rico,2023-08-01,282
+Illinois,2023-08-01,152
+Virginia,2023-08-01,22
+Manitoba,2023-08-01,101
+Montana,2023-08-01,370
+Ontario,2023-08-01,1660
+Maine,2023-08-01,228
+Maryland,2023-08-01,102
+Rhode Island,2023-08-01,7
+Yukon,2023-08-01,6
+Florida,2023-08-01,618
+Louisiana,2023-08-01,11
+Colorado,2023-08-01,738
+Massachusetts,2023-08-01,349
+Arkansas,2023-08-01,40
+New Brunswick,2023-08-01,34
+New Hampshire,2023-08-01,7
+Iowa,2023-08-01,5
+New Mexico,2023-08-01,549
+Oklahoma,2023-08-01,1548
+Delaware,2023-08-01,12
+Nevada,2023-08-01,113
+North Dakota,2023-08-01,8
+South Dakota,2023-08-01,57
+Alaska,2023-08-01,164
+Newfoundland and Labrador,2023-08-01,41
+District of Columbia,2023-08-01,20
+Nova Scotia,2023-08-01,12
+Pennsylvania,2023-08-01,183
+Utah,2023-08-01,18
+New York,2023-08-01,118
+Georgia,2023-08-01,4
+Georgia,2023-09-01,4
+Michigan,2023-09-01,755
+South Carolina,2023-09-01,1
+Arkansas,2023-09-01,40
+Alberta,2023-09-01,731
+California,2023-09-01,1660
+Montana,2023-09-01,373
+Yukon,2023-09-01,6
+Northern Mariana Islands,2023-09-01,1
+Puerto Rico,2023-09-01,282
+Oregon,2023-09-01,746
+Massachusetts,2023-09-01,352
+Rhode Island,2023-09-01,7
+South Dakota,2023-09-01,59
+Florida,2023-09-01,619
+Delaware,2023-09-01,12
+Louisiana,2023-09-01,13
+Minnesota,2023-09-01,14
+Washington,2023-09-01,470
+Ohio,2023-09-01,111
+Maine,2023-09-01,227
+New Mexico,2023-09-01,568
+Nova Scotia,2023-09-01,12
+Arizona,2023-09-01,173
+District of Columbia,2023-09-01,20
+Oklahoma,2023-09-01,1527
+Utah,2023-09-01,18
+New York,2023-09-01,120
+Maryland,2023-09-01,102
+Iowa,2023-09-01,5
+Virginia,2023-09-01,22
+Texas,2023-09-01,9
+Hawaii,2023-09-01,22
+Alaska,2023-09-01,165
+West Virginia,2023-09-01,57
+British Columbia,2023-09-01,427
+North Dakota,2023-09-01,8
+New Jersey,2023-09-01,76
+Illinois,2023-09-01,161
+Pennsylvania,2023-09-01,183
+Vermont,2023-09-01,63
+Nunavut,2023-09-01,2
+Mississippi,2023-09-01,121
+Ontario,2023-09-01,1665
+New Brunswick,2023-09-01,34
+Manitoba,2023-09-01,101
+Missouri,2023-09-01,202
+New Hampshire,2023-09-01,7
+Newfoundland and Labrador,2023-09-01,41
+Colorado,2023-09-01,733
+Saskatchewan,2023-09-01,105
+Nevada,2023-09-01,113
+Connecticut,2023-09-01,28
+Massachusetts,2023-10-01,355
+South Carolina,2023-10-01,1
+Puerto Rico,2023-10-01,282
+Ohio,2023-10-01,113
+South Dakota,2023-10-01,61
+Illinois,2023-10-01,167
+Washington,2023-10-01,470
+Oregon,2023-10-01,745
+British Columbia,2023-10-01,426
+Utah,2023-10-01,18
+Minnesota,2023-10-01,14
+Michigan,2023-10-01,757
+New Hampshire,2023-10-01,7
+Virginia,2023-10-01,22
+California,2023-10-01,1660
+Hawaii,2023-10-01,24
+North Dakota,2023-10-01,8
+Manitoba,2023-10-01,101
+Pennsylvania,2023-10-01,183
+Delaware,2023-10-01,12
+Iowa,2023-10-01,5
+New York,2023-10-01,125
+Oklahoma,2023-10-01,1509
+Colorado,2023-10-01,732
+Nova Scotia,2023-10-01,12
+Connecticut,2023-10-01,30
+Yukon,2023-10-01,6
+Mississippi,2023-10-01,125
+New Jersey,2023-10-01,78
+Northern Mariana Islands,2023-10-01,1
+West Virginia,2023-10-01,58
+Louisiana,2023-10-01,13
+Nunavut,2023-10-01,2
+Maine,2023-10-01,227
+Arizona,2023-10-01,177
+Newfoundland and Labrador,2023-10-01,41
+Rhode Island,2023-10-01,7
+District of Columbia,2023-10-01,20
+Arkansas,2023-10-01,40
+Georgia,2023-10-01,5
+New Mexico,2023-10-01,575
+Montana,2023-10-01,376
+Alberta,2023-10-01,730
+Quebec,2023-10-01,1
+Alaska,2023-10-01,166
+Missouri,2023-10-01,202
+Ontario,2023-10-01,1673
+Maryland,2023-10-01,102
+New Brunswick,2023-10-01,34
+Vermont,2023-10-01,68
+Nevada,2023-10-01,114
+Florida,2023-10-01,626
+Saskatchewan,2023-10-01,105
+Texas,2023-10-01,9
+British Columbia,2023-11-01,427
+Pennsylvania,2023-11-01,184
+Delaware,2023-11-01,12
+Alaska,2023-11-01,166
+Maine,2023-11-01,224
+Texas,2023-11-01,9
+Minnesota,2023-11-01,16
+Ohio,2023-11-01,118
+Connecticut,2023-11-01,34
+District of Columbia,2023-11-01,20
+California,2023-11-01,1650
+Northern Mariana Islands,2023-11-01,1
+Washington,2023-11-01,472
+Colorado,2023-11-01,733
+Rhode Island,2023-11-01,7
+Illinois,2023-11-01,173
+Montana,2023-11-01,382
+Manitoba,2023-11-01,101
+Vermont,2023-11-01,73
+Iowa,2023-11-01,5
+Louisiana,2023-11-01,13
+Puerto Rico,2023-11-01,283
+South Dakota,2023-11-01,64
+Nova Scotia,2023-11-01,12
+Utah,2023-11-01,18
+New York,2023-11-01,139
+South Carolina,2023-11-01,1
+Michigan,2023-11-01,764
+Oregon,2023-11-01,744
+Mississippi,2023-11-01,135
+Virginia,2023-11-01,22
+Yukon,2023-11-01,6
+Georgia,2023-11-01,5
+New Jersey,2023-11-01,89
+Florida,2023-11-01,628
+Ontario,2023-11-01,1641
+Missouri,2023-11-01,204
+West Virginia,2023-11-01,59
+Hawaii,2023-11-01,24
+New Hampshire,2023-11-01,7
+Arizona,2023-11-01,177
+Maryland,2023-11-01,101
+Alberta,2023-11-01,730
+Massachusetts,2023-11-01,356
+North Dakota,2023-11-01,8
+Saskatchewan,2023-11-01,105
+Nevada,2023-11-01,115
+Nunavut,2023-11-01,2
+Arkansas,2023-11-01,40
+New Brunswick,2023-11-01,34
+Quebec,2023-11-01,1
+New Mexico,2023-11-01,589
+Oklahoma,2023-11-01,1505
+Newfoundland and Labrador,2023-11-01,41
+Arkansas,2023-12-01,40
+Virginia,2023-12-01,22
+Oklahoma,2023-12-01,1482
+Northern Mariana Islands,2023-12-01,1
+West Virginia,2023-12-01,60
+Louisiana,2023-12-01,14
+District of Columbia,2023-12-01,22
+Massachusetts,2023-12-01,362
+Rhode Island,2023-12-01,7
+Illinois,2023-12-01,177
+Oregon,2023-12-01,730
+Manitoba,2023-12-01,102
+South Carolina,2023-12-01,1
+Delaware,2023-12-01,12
+Quebec,2023-12-01,1
+Mississippi,2023-12-01,137
+Alberta,2023-12-01,734
+California,2023-12-01,1546
+South Dakota,2023-12-01,64
+Arizona,2023-12-01,178
+North Dakota,2023-12-01,8
+Georgia,2023-12-01,5
+Alaska,2023-12-01,167
+New Jersey,2023-12-01,100
+Ohio,2023-12-01,120
+Minnesota,2023-12-01,16
+Iowa,2023-12-01,5
+Hawaii,2023-12-01,24
+Connecticut,2023-12-01,36
+Newfoundland and Labrador,2023-12-01,41
+Florida,2023-12-01,633
+Saskatchewan,2023-12-01,105
+Maine,2023-12-01,225
+New York,2023-12-01,162
+Ontario,2023-12-01,1613
+British Columbia,2023-12-01,427
+Yukon,2023-12-01,6
+Missouri,2023-12-01,207
+Washington,2023-12-01,470
+Puerto Rico,2023-12-01,288
+Nova Scotia,2023-12-01,13
+Utah,2023-12-01,18
+Pennsylvania,2023-12-01,184
+Texas,2023-12-01,9
+Michigan,2023-12-01,772
+New Mexico,2023-12-01,588
+Maryland,2023-12-01,100
+Vermont,2023-12-01,78
+Montana,2023-12-01,384
+Colorado,2023-12-01,729
+New Hampshire,2023-12-01,7
+Nevada,2023-12-01,115
+New Brunswick,2023-12-01,34
+Nunavut,2023-12-01,2
+Arizona,2024-01-01,178
+Delaware,2024-01-01,12
+Newfoundland and Labrador,2024-01-01,41
+Nunavut,2024-01-01,2
+Quebec,2024-01-01,1
+Oklahoma,2024-01-01,1463
+Virginia,2024-01-01,22
+New Brunswick,2024-01-01,34
+Hawaii,2024-01-01,24
+New York,2024-01-01,176
+New Jersey,2024-01-01,107
+Michigan,2024-01-01,770
+Alberta,2024-01-01,734
+Mississippi,2024-01-01,143
+Oregon,2024-01-01,717
+Montana,2024-01-01,382
+South Carolina,2024-01-01,1
+California,2024-01-01,1536
+Pennsylvania,2024-01-01,186
+Ontario,2024-01-01,1617
+Northern Mariana Islands,2024-01-01,1
+Massachusetts,2024-01-01,364
+Colorado,2024-01-01,730
+British Columbia,2024-01-01,426
+Washington,2024-01-01,470
+Puerto Rico,2024-01-01,293
+Maine,2024-01-01,224
+Missouri,2024-01-01,207
+Arkansas,2024-01-01,40
+West Virginia,2024-01-01,60
+Georgia,2024-01-01,10
+District of Columbia,2024-01-01,22
+Texas,2024-01-01,5
+Rhode Island,2024-01-01,7
+New Hampshire,2024-01-01,7
+Manitoba,2024-01-01,102
+Vermont,2024-01-01,81
+Yukon,2024-01-01,6
+Connecticut,2024-01-01,36
+Illinois,2024-01-01,184
+Louisiana,2024-01-01,16
+South Dakota,2024-01-01,67
+Maryland,2024-01-01,100
+Ohio,2024-01-01,124
+New Mexico,2024-01-01,592
+Alaska,2024-01-01,167
+North Dakota,2024-01-01,8
+Minnesota,2024-01-01,16
+Florida,2024-01-01,637
+Iowa,2024-01-01,5
+Utah,2024-01-01,18
+Nevada,2024-01-01,115
+Saskatchewan,2024-01-01,105
+Nova Scotia,2024-01-01,72
+South Carolina,2024-02-01,1
+Virginia,2024-02-01,22
+District of Columbia,2024-02-01,22
+Vermont,2024-02-01,83
+Florida,2024-02-01,636
+Pennsylvania,2024-02-01,186
+Alaska,2024-02-01,168
+North Dakota,2024-02-01,8
+Texas,2024-02-01,5
+Yukon,2024-02-01,6
+Ontario,2024-02-01,1628
+Colorado,2024-02-01,731
+Mississippi,2024-02-01,148
+Georgia,2024-02-01,10
+Montana,2024-02-01,386
+New Hampshire,2024-02-01,7
+New York,2024-02-01,183
+Arizona,2024-02-01,180
+Manitoba,2024-02-01,103
+Newfoundland and Labrador,2024-02-01,41
+Minnesota,2024-02-01,16
+South Dakota,2024-02-01,68
+West Virginia,2024-02-01,61
+Nevada,2024-02-01,115
+Oregon,2024-02-01,719
+New Jersey,2024-02-01,116
+Arkansas,2024-02-01,40
+Hawaii,2024-02-01,23
+Maine,2024-02-01,224
+New Mexico,2024-02-01,588
+Rhode Island,2024-02-01,7
+Saskatchewan,2024-02-01,105
+Delaware,2024-02-01,12
+Quebec,2024-02-01,1
+Nova Scotia,2024-02-01,72
+Massachusetts,2024-02-01,369
+Washington,2024-02-01,470
+Maryland,2024-02-01,100
+Alberta,2024-02-01,735
+Connecticut,2024-02-01,39
+Puerto Rico,2024-02-01,298
+Nunavut,2024-02-01,2
+Utah,2024-02-01,18
+Louisiana,2024-02-01,16
+New Brunswick,2024-02-01,35
+British Columbia,2024-02-01,431
+California,2024-02-01,1505
+Iowa,2024-02-01,5
+Ohio,2024-02-01,124
+Michigan,2024-02-01,778
+Missouri,2024-02-01,207
+Illinois,2024-02-01,188
+Oklahoma,2024-02-01,1443
+Alberta,2024-03-01,773
+Pennsylvania,2024-03-01,187
+Manitoba,2024-03-01,105
+Florida,2024-03-01,646
+South Carolina,2024-03-01,1
+Minnesota,2024-03-01,16
+Nova Scotia,2024-03-01,72
+Oklahoma,2024-03-01,1402
+Connecticut,2024-03-01,38
+Saskatchewan,2024-03-01,105
+Massachusetts,2024-03-01,373
+Yukon,2024-03-01,6
+North Dakota,2024-03-01,8
+Iowa,2024-03-01,5
+Rhode Island,2024-03-01,7
+Newfoundland and Labrador,2024-03-01,41
+Montana,2024-03-01,392
+Arkansas,2024-03-01,40
+Ontario,2024-03-01,1636
+Virginia,2024-03-01,22
+Maryland,2024-03-01,100
+Utah,2024-03-01,18
+New Brunswick,2024-03-01,35
+California,2024-03-01,1497
+District of Columbia,2024-03-01,23
+Arizona,2024-03-01,181
+Alaska,2024-03-01,169
+Maine,2024-03-01,228
+Ohio,2024-03-01,124
+New Mexico,2024-03-01,591
+West Virginia,2024-03-01,62
+British Columbia,2024-03-01,433
+Washington,2024-03-01,469
+Louisiana,2024-03-01,16
+Vermont,2024-03-01,83
+Michigan,2024-03-01,783
+Colorado,2024-03-01,729
+Nevada,2024-03-01,116
+New Jersey,2024-03-01,126
+South Dakota,2024-03-01,67
+Texas,2024-03-01,5
+Missouri,2024-03-01,206
+New York,2024-03-01,197
+Oregon,2024-03-01,716
+Puerto Rico,2024-03-01,286
+Hawaii,2024-03-01,22
+Georgia,2024-03-01,10
+Delaware,2024-03-01,12
+Nunavut,2024-03-01,2
+Illinois,2024-03-01,193
+Mississippi,2024-03-01,151
+New Hampshire,2024-03-01,7
+Illinois,2024-04-01,199
+Minnesota,2024-04-01,16
+Colorado,2024-04-01,729
+Connecticut,2024-04-01,42
+Iowa,2024-04-01,5
+Hawaii,2024-04-01,22
+South Carolina,2024-04-01,1
+Michigan,2024-04-01,797
+Mississippi,2024-04-01,154
+Virginia,2024-04-01,22
+West Virginia,2024-04-01,62
+North Dakota,2024-04-01,8
+Pennsylvania,2024-04-01,187
+Massachusetts,2024-04-01,377
+North Carolina,2024-04-01,1
+Vermont,2024-04-01,82
+Newfoundland and Labrador,2024-04-01,41
+Oklahoma,2024-04-01,1329
+California,2024-04-01,1502
+New Hampshire,2024-04-01,7
+New York,2024-04-01,218
+Louisiana,2024-04-01,17
+Arkansas,2024-04-01,40
+British Columbia,2024-04-01,417
+Nova Scotia,2024-04-01,72
+Manitoba,2024-04-01,105
+Ontario,2024-04-01,1648
+Delaware,2024-04-01,12
+Missouri,2024-04-01,206
+Rhode Island,2024-04-01,7
+Arizona,2024-04-01,181
+Texas,2024-04-01,5
+Puerto Rico,2024-04-01,286
+New Mexico,2024-04-01,590
+New Jersey,2024-04-01,137
+Washington,2024-04-01,470
+Florida,2024-04-01,664
+Montana,2024-04-01,395
+Yukon,2024-04-01,6
+Oregon,2024-04-01,717
+Alberta,2024-04-01,747
+Alaska,2024-04-01,171
+District of Columbia,2024-04-01,25
+New Brunswick,2024-04-01,36
+Saskatchewan,2024-04-01,100
+Nevada,2024-04-01,116
+South Dakota,2024-04-01,67
+Nunavut,2024-04-01,2
+Utah,2024-04-01,18
+Maine,2024-04-01,229
+Georgia,2024-04-01,10
+Ohio,2024-04-01,126
+Maryland,2024-04-01,101
+Hawaii,2024-05-01,23
+British Columbia,2024-05-01,419
+Nova Scotia,2024-05-01,72
+North Dakota,2024-05-01,8
+New York,2024-05-01,234
+Michigan,2024-05-01,809
+North Carolina,2024-05-01,1
+Maryland,2024-05-01,101
+District of Columbia,2024-05-01,25
+Louisiana,2024-05-01,18
+Nevada,2024-05-01,116
+New Mexico,2024-05-01,598
+Rhode Island,2024-05-01,7
+Nunavut,2024-05-01,2
+New Brunswick,2024-05-01,37
+Arizona,2024-05-01,181
+Yukon,2024-05-01,6
+Missouri,2024-05-01,205
+Vermont,2024-05-01,82
+Minnesota,2024-05-01,16
+Texas,2024-05-01,5
+South Carolina,2024-05-01,1
+Puerto Rico,2024-05-01,293
+Oregon,2024-05-01,714
+Pennsylvania,2024-05-01,187
+Ontario,2024-05-01,1657
+Mississippi,2024-05-01,159
+Illinois,2024-05-01,206
+Oklahoma,2024-05-01,1316
+West Virginia,2024-05-01,62
+Connecticut,2024-05-01,43
+Iowa,2024-05-01,5
+New Hampshire,2024-05-01,7
+New Jersey,2024-05-01,142
+Virginia,2024-05-01,22
+Manitoba,2024-05-01,105
+South Dakota,2024-05-01,67
+Washington,2024-05-01,470
+Alaska,2024-05-01,176
+Montana,2024-05-01,393
+Alberta,2024-05-01,746
+Ohio,2024-05-01,127
+Delaware,2024-05-01,12
+Colorado,2024-05-01,726
+Massachusetts,2024-05-01,383
+Newfoundland and Labrador,2024-05-01,41
+Georgia,2024-05-01,10
+Utah,2024-05-01,18
+Florida,2024-05-01,672
+Maine,2024-05-01,226
+California,2024-05-01,1511
+Arkansas,2024-05-01,41
+Saskatchewan,2024-05-01,100
+Connecticut,2024-06-01,44
+Arizona,2024-06-01,180
+Nunavut,2024-06-01,2
+Virginia,2024-06-01,23
+Ohio,2024-06-01,130
+Ontario,2024-06-01,1669
+Iowa,2024-06-01,5
+Montana,2024-06-01,386
+Illinois,2024-06-01,213
+Mississippi,2024-06-01,160
+New Jersey,2024-06-01,157
+Georgia,2024-06-01,10
+Maryland,2024-06-01,101
+Texas,2024-06-01,5
+Hawaii,2024-06-01,23
+Saskatchewan,2024-06-01,100
+Delaware,2024-06-01,12
+Nevada,2024-06-01,116
+Michigan,2024-06-01,810
+Alberta,2024-06-01,746
+Newfoundland and Labrador,2024-06-01,41
+South Carolina,2024-06-01,1
+Pennsylvania,2024-06-01,185
+Rhode Island,2024-06-01,7
+California,2024-06-01,1512
+North Dakota,2024-06-01,8
+Puerto Rico,2024-06-01,291
+Minnesota,2024-06-01,17
+Florida,2024-06-01,680
+British Columbia,2024-06-01,418
+Louisiana,2024-06-01,18
+Vermont,2024-06-01,84
+Washington,2024-06-01,470
+Massachusetts,2024-06-01,383
+South Dakota,2024-06-01,67
+North Carolina,2024-06-01,1
+Colorado,2024-06-01,724
+District of Columbia,2024-06-01,24
+Alaska,2024-06-01,179
+Maine,2024-06-01,230
+Arkansas,2024-06-01,41
+Utah,2024-06-01,18
+Yukon,2024-06-01,6
+New Hampshire,2024-06-01,7
+New Brunswick,2024-06-01,37
+Manitoba,2024-06-01,105
+West Virginia,2024-06-01,64
+Nova Scotia,2024-06-01,73
+Oklahoma,2024-06-01,1307
+Missouri,2024-06-01,206
+Oregon,2024-06-01,709
+New York,2024-06-01,242
+New Mexico,2024-06-01,602
+New York,2024-07-01,259
+Massachusetts,2024-07-01,391
+Florida,2024-07-01,687
+Georgia,2024-07-01,11
+Colorado,2024-07-01,718
+Oklahoma,2024-07-01,1283
+Ontario,2024-07-01,1663
+Michigan,2024-07-01,814
+Maine,2024-07-01,232
+North Dakota,2024-07-01,8
+New Jersey,2024-07-01,165
+Pennsylvania,2024-07-01,186
+Arizona,2024-07-01,180
+Texas,2024-07-01,5
+British Columbia,2024-07-01,427
+North Carolina,2024-07-01,1
+Oregon,2024-07-01,714
+Missouri,2024-07-01,207
+Delaware,2024-07-01,12
+Alberta,2024-07-01,743
+District of Columbia,2024-07-01,24
+South Dakota,2024-07-01,68
+Ohio,2024-07-01,130
+New Hampshire,2024-07-01,7
+Connecticut,2024-07-01,45
+Saskatchewan,2024-07-01,101
+Hawaii,2024-07-01,23
+Louisiana,2024-07-01,19
+Montana,2024-07-01,391
+West Virginia,2024-07-01,64
+Nunavut,2024-07-01,2
+Minnesota,2024-07-01,17
+California,2024-07-01,1505
+Alaska,2024-07-01,179
+Yukon,2024-07-01,6
+Illinois,2024-07-01,220
+Puerto Rico,2024-07-01,290
+Utah,2024-07-01,18
+Arkansas,2024-07-01,41
+Maryland,2024-07-01,101
+New Brunswick,2024-07-01,38
+New Mexico,2024-07-01,602
+Virginia,2024-07-01,23
+Washington,2024-07-01,469
+Mississippi,2024-07-01,160
+Newfoundland and Labrador,2024-07-01,41
+Nova Scotia,2024-07-01,73
+Nevada,2024-07-01,116
+Vermont,2024-07-01,86
+Rhode Island,2024-07-01,7
+Manitoba,2024-07-01,106
+Iowa,2024-07-01,5
+Alberta,2024-08-01,743
+Ohio,2024-08-01,129
+Connecticut,2024-08-01,47
+Oregon,2024-08-01,715
+Mississippi,2024-08-01,162
+Michigan,2024-08-01,821
+Rhode Island,2024-08-01,7
+Yukon,2024-08-01,6
+New York,2024-08-01,271
+North Carolina,2024-08-01,1
+Delaware,2024-08-01,13
+Pennsylvania,2024-08-01,187
+California,2024-08-01,1486
+South Dakota,2024-08-01,67
+New Hampshire,2024-08-01,7
+Manitoba,2024-08-01,109
+Missouri,2024-08-01,206
+Louisiana,2024-08-01,19
+Texas,2024-08-01,5
+Nunavut,2024-08-01,2
+Hawaii,2024-08-01,23
+British Columbia,2024-08-01,429
+Saskatchewan,2024-08-01,100
+Arizona,2024-08-01,178
+Florida,2024-08-01,696
+Georgia,2024-08-01,13
+Washington,2024-08-01,475
+New Mexico,2024-08-01,606
+Arkansas,2024-08-01,41
+Utah,2024-08-01,18
+New Jersey,2024-08-01,177
+North Dakota,2024-08-01,8
+Puerto Rico,2024-08-01,292
+Nevada,2024-08-01,116
+Iowa,2024-08-01,5
+Nova Scotia,2024-08-01,75
+Alaska,2024-08-01,180
+Massachusetts,2024-08-01,394
+Illinois,2024-08-01,221
+District of Columbia,2024-08-01,25
+Maine,2024-08-01,233
+Colorado,2024-08-01,710
+West Virginia,2024-08-01,63
+Maryland,2024-08-01,101
+Minnesota,2024-08-01,17
+New Brunswick,2024-08-01,40
+Oklahoma,2024-08-01,1276
+Virginia,2024-08-01,23
+Newfoundland and Labrador,2024-08-01,41
+Vermont,2024-08-01,89
+Ontario,2024-08-01,1669
+Montana,2024-08-01,396
+Alberta,2024-09-01,733
+New York,2024-09-01,292
+Utah,2024-09-01,18
+Georgia,2024-09-01,13
+New Mexico,2024-09-01,599
+New Brunswick,2024-09-01,40
+Louisiana,2024-09-01,21
+Delaware,2024-09-01,13
+Newfoundland and Labrador,2024-09-01,41
+Maine,2024-09-01,233
+British Columbia,2024-09-01,429
+New Jersey,2024-09-01,190
+South Dakota,2024-09-01,67
+New Hampshire,2024-09-01,7
+California,2024-09-01,1485
+Illinois,2024-09-01,229
+Manitoba,2024-09-01,109
+Texas,2024-09-01,5
+Massachusetts,2024-09-01,393
+Washington,2024-09-01,472
+Puerto Rico,2024-09-01,289
+Saskatchewan,2024-09-01,100
+Nunavut,2024-09-01,2
+Maryland,2024-09-01,101
+Colorado,2024-09-01,709
+Ontario,2024-09-01,1667
+Arkansas,2024-09-01,41
+Alaska,2024-09-01,180
+Nevada,2024-09-01,116
+North Dakota,2024-09-01,8
+Oregon,2024-09-01,710
+Montana,2024-09-01,396
+North Carolina,2024-09-01,1
+Ohio,2024-09-01,129
+Mississippi,2024-09-01,163
+Pennsylvania,2024-09-01,188
+Hawaii,2024-09-01,23
+Virginia,2024-09-01,23
+Missouri,2024-09-01,207
+Michigan,2024-09-01,824
+Connecticut,2024-09-01,50
+Oklahoma,2024-09-01,1261
+Nova Scotia,2024-09-01,75
+Vermont,2024-09-01,89
+Iowa,2024-09-01,5
+Yukon,2024-09-01,6
+District of Columbia,2024-09-01,27
+West Virginia,2024-09-01,61
+Arizona,2024-09-01,177
+Rhode Island,2024-09-01,7
+Minnesota,2024-09-01,17
+Florida,2024-09-01,707
+Arizona,2024-10-01,177
+Manitoba,2024-10-01,110
+North Carolina,2024-10-01,1
+Montana,2024-10-01,391
+California,2024-10-01,1482
+Hawaii,2024-10-01,24
+Connecticut,2024-10-01,53
+Iowa,2024-10-01,5
+South Dakota,2024-10-01,68
+Mississippi,2024-10-01,165
+Vermont,2024-10-01,90
+Nunavut,2024-10-01,2
+Pennsylvania,2024-10-01,186
+Rhode Island,2024-10-01,7
+Oregon,2024-10-01,707
+Illinois,2024-10-01,233
+District of Columbia,2024-10-01,28
+Nevada,2024-10-01,116
+Washington,2024-10-01,471
+Florida,2024-10-01,718
+Texas,2024-10-01,5
+New Mexico,2024-10-01,590
+Alaska,2024-10-01,182
+Colorado,2024-10-01,703
+Minnesota,2024-10-01,17
+Massachusetts,2024-10-01,394
+Ohio,2024-10-01,129
+Saskatchewan,2024-10-01,100
+British Columbia,2024-10-01,426
+Nova Scotia,2024-10-01,75
+Missouri,2024-10-01,209
+Delaware,2024-10-01,13
+Michigan,2024-10-01,825
+Newfoundland and Labrador,2024-10-01,42
+New Brunswick,2024-10-01,40
+Utah,2024-10-01,18
+New York,2024-10-01,308
+Virginia,2024-10-01,23
+New Hampshire,2024-10-01,7
+New Jersey,2024-10-01,200
+Maryland,2024-10-01,101
+Maine,2024-10-01,230
+Louisiana,2024-10-01,21
+Ontario,2024-10-01,1669
+Puerto Rico,2024-10-01,289
+Oklahoma,2024-10-01,1242
+Yukon,2024-10-01,6
+Alberta,2024-10-01,731
+West Virginia,2024-10-01,60
+Arkansas,2024-10-01,41
+Georgia,2024-10-01,13
+North Dakota,2024-10-01,8
+Louisiana,2024-11-01,22
+Florida,2024-11-01,720
+Newfoundland and Labrador,2024-11-01,42
+Manitoba,2024-11-01,110
+North Carolina,2024-11-01,1
+Oklahoma,2024-11-01,1230
+Missouri,2024-11-01,208
+Maryland,2024-11-01,99
+Hawaii,2024-11-01,24
+New Brunswick,2024-11-01,40
+Ontario,2024-11-01,1609
+South Dakota,2024-11-01,70
+Virginia,2024-11-01,23
+Ohio,2024-11-01,130
+British Columbia,2024-11-01,427
+Colorado,2024-11-01,700
+Michigan,2024-11-01,830
+North Dakota,2024-11-01,8
+Rhode Island,2024-11-01,7
+California,2024-11-01,1476
+Nunavut,2024-11-01,2
+Washington,2024-11-01,475
+Nevada,2024-11-01,116
+New York,2024-11-01,340
+Arizona,2024-11-01,177
+Alberta,2024-11-01,732
+Yukon,2024-11-01,6
+Vermont,2024-11-01,94
+Montana,2024-11-01,394
+Utah,2024-11-01,18
+Delaware,2024-11-01,13
+Puerto Rico,2024-11-01,291
+Massachusetts,2024-11-01,395
+Maine,2024-11-01,232
+Nova Scotia,2024-11-01,75
+New Mexico,2024-11-01,580
+Oregon,2024-11-01,710
+District of Columbia,2024-11-01,31
+Saskatchewan,2024-11-01,101
+Illinois,2024-11-01,238
+Mississippi,2024-11-01,166
+Texas,2024-11-01,5
+Alaska,2024-11-01,183
+Connecticut,2024-11-01,55
+Arkansas,2024-11-01,41
+New Hampshire,2024-11-01,7
+Georgia,2024-11-01,14
+West Virginia,2024-11-01,60
+Minnesota,2024-11-01,17
+Iowa,2024-11-01,5
+Pennsylvania,2024-11-01,186
+New Jersey,2024-11-01,206
+South Dakota,2024-12-01,68
+Yukon,2024-12-01,6
+Nunavut,2024-12-01,2
+Arizona,2024-12-01,177
+California,2024-12-01,1481
+Vermont,2024-12-01,95
+Puerto Rico,2024-12-01,290
+Louisiana,2024-12-01,23
+Iowa,2024-12-01,5
+Florida,2024-12-01,724
+Colorado,2024-12-01,700
+British Columbia,2024-12-01,430
+Oregon,2024-12-01,708
+New Hampshire,2024-12-01,7
+North Carolina,2024-12-01,1
+Arkansas,2024-12-01,41
+Pennsylvania,2024-12-01,187
+Maryland,2024-12-01,99
+Virginia,2024-12-01,23
+Missouri,2024-12-01,215
+Georgia,2024-12-01,14
+West Virginia,2024-12-01,60
+Utah,2024-12-01,18
+New York,2024-12-01,357
+Mississippi,2024-12-01,168
+Hawaii,2024-12-01,24
+Ohio,2024-12-01,130
+Maine,2024-12-01,232
+Connecticut,2024-12-01,56
+Nevada,2024-12-01,116
+Minnesota,2024-12-01,17
+Manitoba,2024-12-01,110
+Alaska,2024-12-01,183
+Michigan,2024-12-01,834
+Alberta,2024-12-01,732
+Saskatchewan,2024-12-01,101
+Delaware,2024-12-01,13
+Illinois,2024-12-01,241
+Massachusetts,2024-12-01,399
+Montana,2024-12-01,395
+Nova Scotia,2024-12-01,75
+Rhode Island,2024-12-01,7
+Oklahoma,2024-12-01,1198
+District of Columbia,2024-12-01,35
+New Mexico,2024-12-01,576
+Texas,2024-12-01,5
+North Dakota,2024-12-01,8
+Washington,2024-12-01,472
+New Jersey,2024-12-01,216
+New Brunswick,2024-12-01,40
+Newfoundland and Labrador,2024-12-01,42
+Ontario,2024-12-01,1617
+Virginia,2025-01-01,23
+West Virginia,2025-01-01,60
+Ohio,2025-01-01,135
+Maryland,2025-01-01,99
+New Mexico,2025-01-01,581
+New Brunswick,2025-01-01,40
+Arizona,2025-01-01,174
+North Dakota,2025-01-01,8
+Minnesota,2025-01-01,17
+New Hampshire,2025-01-01,7
+Vermont,2025-01-01,97
+Hawaii,2025-01-01,25
+Manitoba,2025-01-01,112
+Connecticut,2025-01-01,59
+Illinois,2025-01-01,242
+New York,2025-01-01,387
+Rhode Island,2025-01-01,7
+Washington,2025-01-01,473
+Iowa,2025-01-01,5
+Colorado,2025-01-01,702
+Missouri,2025-01-01,215
+South Dakota,2025-01-01,68
+Arkansas,2025-01-01,41
+Saskatchewan,2025-01-01,101
+Texas,2025-01-01,5
+Yukon,2025-01-01,6
+Delaware,2025-01-01,13
+Massachusetts,2025-01-01,401
+Louisiana,2025-01-01,25
+British Columbia,2025-01-01,428
+New Jersey,2025-01-01,225
+Newfoundland and Labrador,2025-01-01,42
+Montana,2025-01-01,404
+Nevada,2025-01-01,116
+Oregon,2025-01-01,706
+Mississippi,2025-01-01,170
+Alaska,2025-01-01,184
+California,2025-01-01,1482
+Georgia,2025-01-01,14
+Pennsylvania,2025-01-01,188
+Puerto Rico,2025-01-01,293
+Utah,2025-01-01,18
+North Carolina,2025-01-01,1
+Maine,2025-01-01,232
+Nunavut,2025-01-01,2
+Michigan,2025-01-01,836
+District of Columbia,2025-01-01,40
+Ontario,2025-01-01,1622
+Oklahoma,2025-01-01,1190
+Nova Scotia,2025-01-01,75
+Florida,2025-01-01,727
+Alberta,2025-01-01,732
+Washington,2025-02-01,472
+British Columbia,2025-02-01,432
+Rhode Island,2025-02-01,7
+Montana,2025-02-01,407
+Texas,2025-02-01,5
+Massachusetts,2025-02-01,402
+Nova Scotia,2025-02-01,75
+California,2025-02-01,1494
+Virginia,2025-02-01,23
+Maryland,2025-02-01,101
+Hawaii,2025-02-01,25
+Manitoba,2025-02-01,112
+New York,2025-02-01,411
+Connecticut,2025-02-01,60
+New Brunswick,2025-02-01,41
+Puerto Rico,2025-02-01,297
+North Carolina,2025-02-01,1
+Alaska,2025-02-01,186
+Colorado,2025-02-01,692
+Mississippi,2025-02-01,171
+Louisiana,2025-02-01,26
+Michigan,2025-02-01,839
+Georgia,2025-02-01,14
+Ohio,2025-02-01,139
+Illinois,2025-02-01,245
+Vermont,2025-02-01,98
+Alberta,2025-02-01,732
+Florida,2025-02-01,724
+Nunavut,2025-02-01,2
+North Dakota,2025-02-01,8
+Oklahoma,2025-02-01,1184
+New Hampshire,2025-02-01,7
+South Dakota,2025-02-01,66
+Newfoundland and Labrador,2025-02-01,43
+Pennsylvania,2025-02-01,189
+West Virginia,2025-02-01,61
+Delaware,2025-02-01,13
+New Mexico,2025-02-01,577
+Arkansas,2025-02-01,41
+Saskatchewan,2025-02-01,101
+Arizona,2025-02-01,174
+Minnesota,2025-02-01,17
+Ontario,2025-02-01,1623
+Utah,2025-02-01,18
+Maine,2025-02-01,231
+Missouri,2025-02-01,215
+Iowa,2025-02-01,5
+Oregon,2025-02-01,705
+District of Columbia,2025-02-01,43
+Yukon,2025-02-01,6
+New Jersey,2025-02-01,232
+Nevada,2025-02-01,116
+Connecticut,2025-03-01,60
+Massachusetts,2025-03-01,405
+New Brunswick,2025-03-01,41
+Virginia,2025-03-01,23
+North Carolina,2025-03-01,1
+Pennsylvania,2025-03-01,190
+Delaware,2025-03-01,13
+Yukon,2025-03-01,6
+Arizona,2025-03-01,175
+British Columbia,2025-03-01,433
+Puerto Rico,2025-03-01,280
+Rhode Island,2025-03-01,7
+Michigan,2025-03-01,837
+Oregon,2025-03-01,700
+Colorado,2025-03-01,688
+New York,2025-03-01,435
+Utah,2025-03-01,18
+Nova Scotia,2025-03-01,76
+South Dakota,2025-03-01,64
+Mississippi,2025-03-01,167
+North Dakota,2025-03-01,8
+California,2025-03-01,1496
+Oklahoma,2025-03-01,1134
+New Hampshire,2025-03-01,7
+District of Columbia,2025-03-01,51
+Arkansas,2025-03-01,40
+Ontario,2025-03-01,1630
+Washington,2025-03-01,469
+Louisiana,2025-03-01,26
+Nevada,2025-03-01,116
+Iowa,2025-03-01,5
+Illinois,2025-03-01,249
+Georgia,2025-03-01,14
+Vermont,2025-03-01,100
+New Jersey,2025-03-01,239
+Texas,2025-03-01,11
+Minnesota,2025-03-01,17
+Montana,2025-03-01,408
+Saskatchewan,2025-03-01,101
+Alberta,2025-03-01,763
+Alaska,2025-03-01,184
+Missouri,2025-03-01,214
+Maryland,2025-03-01,101
+Hawaii,2025-03-01,25
+New Mexico,2025-03-01,576
+West Virginia,2025-03-01,61
+Florida,2025-03-01,727
+Ohio,2025-03-01,139
+Maine,2025-03-01,232
+Nunavut,2025-03-01,2
+Newfoundland and Labrador,2025-03-01,43
+Manitoba,2025-03-01,112
+Alaska,2025-04-01,186
+Oklahoma,2025-04-01,1131
+Nova Scotia,2025-04-01,76
+Arizona,2025-04-01,176
+Texas,2025-04-01,11
+Nevada,2025-04-01,117
+Connecticut,2025-04-01,61
+Puerto Rico,2025-04-01,280
+New Jersey,2025-04-01,249
+North Dakota,2025-04-01,8
+British Columbia,2025-04-01,427
+District of Columbia,2025-04-01,61
+Maine,2025-04-01,235
+Vermont,2025-04-01,103
+Colorado,2025-04-01,681
+Saskatchewan,2025-04-01,98
+Yukon,2025-04-01,6
+New Hampshire,2025-04-01,7
+Iowa,2025-04-01,5
+Oregon,2025-04-01,696
+Newfoundland and Labrador,2025-04-01,44
+Florida,2025-04-01,729
+Louisiana,2025-04-01,25
+Michigan,2025-04-01,839
+Montana,2025-04-01,407
+Pennsylvania,2025-04-01,192
+Washington,2025-04-01,470
+Delaware,2025-04-01,13
+Ontario,2025-04-01,1630
+California,2025-04-01,1495
+New Mexico,2025-04-01,576
+Georgia,2025-04-01,15
+Utah,2025-04-01,18
+North Carolina,2025-04-01,1
+Alberta,2025-04-01,750
+Maryland,2025-04-01,103
+Mississippi,2025-04-01,167
+Ohio,2025-04-01,146
+South Dakota,2025-04-01,64
+Hawaii,2025-04-01,26
+Virginia,2025-04-01,23
+Massachusetts,2025-04-01,409
+New York,2025-04-01,469
+West Virginia,2025-04-01,63
+Minnesota,2025-04-01,17
+Arkansas,2025-04-01,40
+Manitoba,2025-04-01,114
+Missouri,2025-04-01,215
+New Brunswick,2025-04-01,42
+Nunavut,2025-04-01,2
+Illinois,2025-04-01,249
+Rhode Island,2025-04-01,7
+Manitoba,2025-05-01,114
+Ontario,2025-05-01,1633
+Utah,2025-05-01,18
+Delaware,2025-05-01,13
+Oregon,2025-05-01,696
+Michigan,2025-05-01,842
+California,2025-05-01,1497
+North Carolina,2025-05-01,1
+New Hampshire,2025-05-01,7
+Saskatchewan,2025-05-01,98
+Connecticut,2025-05-01,67
+Louisiana,2025-05-01,25
+New Jersey,2025-05-01,253
+Maryland,2025-05-01,103
+Washington,2025-05-01,470
+South Dakota,2025-05-01,65
+Yukon,2025-05-01,6
+Texas,2025-05-01,11
+Arizona,2025-05-01,176
+Arkansas,2025-05-01,40
+Massachusetts,2025-05-01,410
+Nevada,2025-05-01,117
+Missouri,2025-05-01,216
+Vermont,2025-05-01,103
+Rhode Island,2025-05-01,7
+Newfoundland and Labrador,2025-05-01,44
+Hawaii,2025-05-01,25
+West Virginia,2025-05-01,63
+New Mexico,2025-05-01,574
+North Dakota,2025-05-01,8
+Iowa,2025-05-01,5
+British Columbia,2025-05-01,428
+Puerto Rico,2025-05-01,279
+Virginia,2025-05-01,23
+New York,2025-05-01,490
+New Brunswick,2025-05-01,42
+District of Columbia,2025-05-01,63
+Ohio,2025-05-01,149
+Pennsylvania,2025-05-01,192
+Alberta,2025-05-01,747
+Colorado,2025-05-01,679
+Alaska,2025-05-01,188
+Georgia,2025-05-01,16
+Mississippi,2025-05-01,169
+Florida,2025-05-01,734
+Nova Scotia,2025-05-01,76
+Minnesota,2025-05-01,20
+Maine,2025-05-01,232
+Illinois,2025-05-01,252
+Nunavut,2025-05-01,2
+Oklahoma,2025-05-01,1120
+Montana,2025-05-01,420
+Louisiana,2025-06-01,25
+North Carolina,2025-06-01,1
+Texas,2025-06-01,11
+Rhode Island,2025-06-01,7
+Massachusetts,2025-06-01,412
+Florida,2025-06-01,736
+Nevada,2025-06-01,116
+Oregon,2025-06-01,694
+Iowa,2025-06-01,5
+Nunavut,2025-06-01,2
+Nova Scotia,2025-06-01,76
+Utah,2025-06-01,18
+California,2025-06-01,1484
+Colorado,2025-06-01,675
+New York,2025-06-01,497
+Georgia,2025-06-01,16
+District of Columbia,2025-06-01,67
+Mississippi,2025-06-01,170
+Alberta,2025-06-01,748
+Arkansas,2025-06-01,40
+Oklahoma,2025-06-01,1106
+Montana,2025-06-01,418
+South Dakota,2025-06-01,66
+North Dakota,2025-06-01,8
+Ontario,2025-06-01,1646
+Missouri,2025-06-01,220
+Delaware,2025-06-01,13
+Arizona,2025-06-01,177
+Maine,2025-06-01,233
+Newfoundland and Labrador,2025-06-01,44
+Ohio,2025-06-01,154
+Illinois,2025-06-01,256
+Connecticut,2025-06-01,69
+Minnesota,2025-06-01,21
+New Jersey,2025-06-01,263
+Pennsylvania,2025-06-01,192
+Virginia,2025-06-01,23
+British Columbia,2025-06-01,433
+Yukon,2025-06-01,6
+West Virginia,2025-06-01,63
+Vermont,2025-06-01,104
+Maryland,2025-06-01,104
+New Hampshire,2025-06-01,7
+Hawaii,2025-06-01,25
+Washington,2025-06-01,469
+New Mexico,2025-06-01,583
+Puerto Rico,2025-06-01,276
+Saskatchewan,2025-06-01,98
+Manitoba,2025-06-01,114
+Michigan,2025-06-01,829
+Alaska,2025-06-01,188
+New Brunswick,2025-06-01,42
+Mississippi,2025-07-01,175
+Nevada,2025-07-01,117
+Delaware,2025-07-01,13
+Arizona,2025-07-01,176
+New Mexico,2025-07-01,572
+Oklahoma,2025-07-01,1096
+British Columbia,2025-07-01,431
+Hawaii,2025-07-01,25
+Utah,2025-07-01,18
+Nova Scotia,2025-07-01,76
+Nunavut,2025-07-01,2
+Puerto Rico,2025-07-01,273
+North Dakota,2025-07-01,8
+Maine,2025-07-01,233
+New Brunswick,2025-07-01,43
+Pennsylvania,2025-07-01,192
+New Hampshire,2025-07-01,7
+Florida,2025-07-01,726
+Colorado,2025-07-01,678
+Vermont,2025-07-01,104
+Alberta,2025-07-01,754
+Ontario,2025-07-01,1648
+Yukon,2025-07-01,6
+Newfoundland and Labrador,2025-07-01,44
+Ohio,2025-07-01,162
+Alaska,2025-07-01,189
+District of Columbia,2025-07-01,68
+Oregon,2025-07-01,698
+Michigan,2025-07-01,829
+Massachusetts,2025-07-01,416
+New Jersey,2025-07-01,270
+Saskatchewan,2025-07-01,97
+Minnesota,2025-07-01,23
+Arkansas,2025-07-01,40
+Louisiana,2025-07-01,25
+North Carolina,2025-07-01,1
+Montana,2025-07-01,422
+West Virginia,2025-07-01,62
+California,2025-07-01,1473
+Maryland,2025-07-01,104
+Manitoba,2025-07-01,115
+New York,2025-07-01,519
+Rhode Island,2025-07-01,7
+Missouri,2025-07-01,220
+Iowa,2025-07-01,5
+Washington,2025-07-01,472
+Virginia,2025-07-01,23
+South Dakota,2025-07-01,67
+Georgia,2025-07-01,16
+Illinois,2025-07-01,258
+Texas,2025-07-01,11
+Connecticut,2025-07-01,69
+Utah,2025-08-01,18
+Oregon,2025-08-01,699
+Alaska,2025-08-01,188
+Oklahoma,2025-08-01,1078
+New Mexico,2025-08-01,574
+Minnesota,2025-08-01,24
+New Jersey,2025-08-01,273
+Newfoundland and Labrador,2025-08-01,44
+Maine,2025-08-01,235
+Hawaii,2025-08-01,25
+New Brunswick,2025-08-01,44
+Vermont,2025-08-01,104
+Yukon,2025-08-01,5
+District of Columbia,2025-08-01,69
+Alberta,2025-08-01,756
+Michigan,2025-08-01,819
+Illinois,2025-08-01,260
+Iowa,2025-08-01,5
+Puerto Rico,2025-08-01,272
+Pennsylvania,2025-08-01,189
+Nova Scotia,2025-08-01,76
+Manitoba,2025-08-01,115
+Washington,2025-08-01,470
+New Hampshire,2025-08-01,7
+Virginia,2025-08-01,23
+Missouri,2025-08-01,221
+Mississippi,2025-08-01,176
+Rhode Island,2025-08-01,7
+Arizona,2025-08-01,176
+Delaware,2025-08-01,13
+Massachusetts,2025-08-01,418
+Ohio,2025-08-01,170
+New York,2025-08-01,533
+West Virginia,2025-08-01,63
+North Carolina,2025-08-01,1
+Georgia,2025-08-01,16
+Nunavut,2025-08-01,2
+Louisiana,2025-08-01,25
+Connecticut,2025-08-01,68
+California,2025-08-01,1441
+Colorado,2025-08-01,670
+Saskatchewan,2025-08-01,98
+Maryland,2025-08-01,105
+Florida,2025-08-01,730
+Montana,2025-08-01,420
+British Columbia,2025-08-01,432
+South Dakota,2025-08-01,67
+Texas,2025-08-01,11
+Ontario,2025-08-01,1654
+Nevada,2025-08-01,117
+North Dakota,2025-08-01,8
+Arkansas,2025-08-01,40
+Saskatchewan,2025-09-01,98
+New Brunswick,2025-09-01,44
+North Dakota,2025-09-01,8
+Colorado,2025-09-01,671
+Yukon,2025-09-01,5
+New York,2025-09-01,552
+Newfoundland and Labrador,2025-09-01,45
+Manitoba,2025-09-01,116
+Arkansas,2025-09-01,40
+District of Columbia,2025-09-01,70
+Hawaii,2025-09-01,25
+Louisiana,2025-09-01,26
+British Columbia,2025-09-01,434
+North Carolina,2025-09-01,1
+Arizona,2025-09-01,177
+Michigan,2025-09-01,794
+California,2025-09-01,1436
+Nunavut,2025-09-01,2
+New Jersey,2025-09-01,279
+Texas,2025-09-01,11
+West Virginia,2025-09-01,63
+Virginia,2025-09-01,23
+Minnesota,2025-09-01,61
+Maryland,2025-09-01,107
+Connecticut,2025-09-01,67
+Vermont,2025-09-01,104
+New Mexico,2025-09-01,569
+South Dakota,2025-09-01,66
+Ohio,2025-09-01,176
+Maine,2025-09-01,235
+Pennsylvania,2025-09-01,189
+Delaware,2025-09-01,14
+Utah,2025-09-01,18
+Alberta,2025-09-01,759
+Oklahoma,2025-09-01,1060
+New Hampshire,2025-09-01,7
+Missouri,2025-09-01,225
+Iowa,2025-09-01,5
+Montana,2025-09-01,419
+Georgia,2025-09-01,18
+Illinois,2025-09-01,260
+Florida,2025-09-01,727
+Alaska,2025-09-01,187
+Washington,2025-09-01,469
+Nova Scotia,2025-09-01,76
+Rhode Island,2025-09-01,7
+Puerto Rico,2025-09-01,271
+Ontario,2025-09-01,1655
+Nevada,2025-09-01,117
+Mississippi,2025-09-01,178
+Massachusetts,2025-09-01,419
+Oregon,2025-09-01,697
+Colorado,2025-10-01,670
+Alaska,2025-10-01,187
+Montana,2025-10-01,416
+Pennsylvania,2025-10-01,190
+Missouri,2025-10-01,224
+New Mexico,2025-10-01,567
+Virginia,2025-10-01,23
+California,2025-10-01,1428
+Utah,2025-10-01,18
+Iowa,2025-10-01,5
+Hawaii,2025-10-01,26
+Arizona,2025-10-01,177
+Nevada,2025-10-01,117
+Delaware,2025-10-01,14
+Nunavut,2025-10-01,2
+Michigan,2025-10-01,791
+Illinois,2025-10-01,261
+British Columbia,2025-10-01,433
+Nova Scotia,2025-10-01,76
+North Carolina,2025-10-01,1
+Oregon,2025-10-01,698
+North Dakota,2025-10-01,8
+South Dakota,2025-10-01,66
+District of Columbia,2025-10-01,70
+Maryland,2025-10-01,108
+Washington,2025-10-01,468
+Louisiana,2025-10-01,26
+New Brunswick,2025-10-01,44
+Minnesota,2025-10-01,64
+West Virginia,2025-10-01,63
+Ohio,2025-10-01,179
+Saskatchewan,2025-10-01,99
+Vermont,2025-10-01,104
+Alberta,2025-10-01,763
+New York,2025-10-01,575
+Newfoundland and Labrador,2025-10-01,45
+Ontario,2025-10-01,1648
+Arkansas,2025-10-01,39
+Oklahoma,2025-10-01,1047
+Rhode Island,2025-10-01,7
+Massachusetts,2025-10-01,420
+Florida,2025-10-01,725
+Texas,2025-10-01,11
+New Jersey,2025-10-01,286
+Maine,2025-10-01,234
+Yukon,2025-10-01,5
+Puerto Rico,2025-10-01,271
+Georgia,2025-10-01,19
+Connecticut,2025-10-01,68
+New Hampshire,2025-10-01,7
+Manitoba,2025-10-01,116
+Mississippi,2025-10-01,177
+North Carolina,2025-11-01,1
+Oklahoma,2025-11-01,1024
+New Hampshire,2025-11-01,7
+Alaska,2025-11-01,187
+New Brunswick,2025-11-01,45
+New York,2025-11-01,588
+Saskatchewan,2025-11-01,98
+Colorado,2025-11-01,665
+Illinois,2025-11-01,262
+Washington,2025-11-01,465
+Massachusetts,2025-11-01,420
+Georgia,2025-11-01,19
+Rhode Island,2025-11-01,7
+Oregon,2025-11-01,696
+Utah,2025-11-01,18
+Manitoba,2025-11-01,116
+Nova Scotia,2025-11-01,77
+Texas,2025-11-01,11
+Connecticut,2025-11-01,68
+Ontario,2025-11-01,1613
+Newfoundland and Labrador,2025-11-01,44
+Hawaii,2025-11-01,25
+South Dakota,2025-11-01,67
+Louisiana,2025-11-01,27
+Maryland,2025-11-01,108
+Ohio,2025-11-01,184
+Vermont,2025-11-01,102
+Yukon,2025-11-01,5
+Virginia,2025-11-01,23
+Mississippi,2025-11-01,180
+Pennsylvania,2025-11-01,191
+West Virginia,2025-11-01,63
+California,2025-11-01,1412
+British Columbia,2025-11-01,430
+North Dakota,2025-11-01,8
+Puerto Rico,2025-11-01,271
+Delaware,2025-11-01,14
+Arizona,2025-11-01,176
+Nevada,2025-11-01,117
+Maine,2025-11-01,233
+Montana,2025-11-01,419
+Arkansas,2025-11-01,39
+Missouri,2025-11-01,225
+Iowa,2025-11-01,5
+Nunavut,2025-11-01,1
+Minnesota,2025-11-01,72
+Michigan,2025-11-01,785
+New Mexico,2025-11-01,556
+Alberta,2025-11-01,766
+Florida,2025-11-01,727
+District of Columbia,2025-11-01,71
+New Jersey,2025-11-01,292
+Washington,2025-12-01,464
+North Dakota,2025-12-01,8
+New Jersey,2025-12-01,298
+New Brunswick,2025-12-01,45
+Kentucky,2025-12-01,1
+New Hampshire,2025-12-01,7
+South Dakota,2025-12-01,67
+Alaska,2025-12-01,186
+New Mexico,2025-12-01,555
+Mississippi,2025-12-01,181
+Arkansas,2025-12-01,37
+North Carolina,2025-12-01,1
+Nunavut,2025-12-01,1
+Virginia,2025-12-01,23
+Montana,2025-12-01,421
+Iowa,2025-12-01,5
+Nova Scotia,2025-12-01,77
+Missouri,2025-12-01,226
+Saskatchewan,2025-12-01,98
+Oregon,2025-12-01,694
+Maine,2025-12-01,232
+Utah,2025-12-01,18
+Florida,2025-12-01,729
+Georgia,2025-12-01,19
+Connecticut,2025-12-01,68
+Newfoundland and Labrador,2025-12-01,44
+District of Columbia,2025-12-01,71
+Arizona,2025-12-01,176
+Hawaii,2025-12-01,25
+Ohio,2025-12-01,189
+Manitoba,2025-12-01,114
+Vermont,2025-12-01,101
+Illinois,2025-12-01,262
+Rhode Island,2025-12-01,8
+Pennsylvania,2025-12-01,191
+Yukon,2025-12-01,5
+New York,2025-12-01,601
+Ontario,2025-12-01,1614
+Massachusetts,2025-12-01,422
+Puerto Rico,2025-12-01,271
+British Columbia,2025-12-01,432
+Delaware,2025-12-01,14
+Alberta,2025-12-01,768
+Minnesota,2025-12-01,77
+Maryland,2025-12-01,108
+Nevada,2025-12-01,116
+California,2025-12-01,1416
+Louisiana,2025-12-01,28
+Texas,2025-12-01,11
+Oklahoma,2025-12-01,1012
+Michigan,2025-12-01,781
+Colorado,2025-12-01,665
+West Virginia,2025-12-01,64
+Mississippi,2026-01-01,181
+Yukon,2026-01-01,5
+North Carolina,2026-01-01,1
+Minnesota,2026-01-01,83
+Georgia,2026-01-01,21
+Rhode Island,2026-01-01,8
+Kentucky,2026-01-01,4
+New Brunswick,2026-01-01,45
+British Columbia,2026-01-01,434
+Washington,2026-01-01,463
+Louisiana,2026-01-01,28
+California,2026-01-01,1418
+New Mexico,2026-01-01,553
+District of Columbia,2026-01-01,72
+Arizona,2026-01-01,176
+Utah,2026-01-01,18
+Oregon,2026-01-01,694
+Nunavut,2026-01-01,1
+Ohio,2026-01-01,193
+Illinois,2026-01-01,266
+New Hampshire,2026-01-01,7
+Hawaii,2026-01-01,25
+Michigan,2026-01-01,777
+Alberta,2026-01-01,773
+New York,2026-01-01,621
+Nevada,2026-01-01,116
+Maine,2026-01-01,232
+Virginia,2026-01-01,23
+Pennsylvania,2026-01-01,192
+Maryland,2026-01-01,110
+Colorado,2026-01-01,666
+Missouri,2026-01-01,227
+Florida,2026-01-01,738
+Manitoba,2026-01-01,114
+West Virginia,2026-01-01,65
+Saskatchewan,2026-01-01,98
+Arkansas,2026-01-01,37
+Alaska,2026-01-01,187
+Connecticut,2026-01-01,68
+Oklahoma,2026-01-01,1006
+Newfoundland and Labrador,2026-01-01,44
+New Jersey,2026-01-01,300
+Texas,2026-01-01,11
+Vermont,2026-01-01,102
+Iowa,2026-01-01,5
+Puerto Rico,2026-01-01,271
+North Dakota,2026-01-01,8
+Delaware,2026-01-01,14
+Nova Scotia,2026-01-01,77
+Ontario,2026-01-01,1621
+South Dakota,2026-01-01,67
+Massachusetts,2026-01-01,421
+Montana,2026-01-01,418
+Minnesota,2026-02-01,94
+Oklahoma,2026-02-01,1002
+South Dakota,2026-02-01,68
+Louisiana,2026-02-01,28
+Texas,2026-02-01,11
+Pennsylvania,2026-02-01,192
+Iowa,2026-02-01,5
+Florida,2026-02-01,739
+Delaware,2026-02-01,14
+Massachusetts,2026-02-01,420
+California,2026-02-01,1422
+Mississippi,2026-02-01,183
+Colorado,2026-02-01,664
+New York,2026-02-01,637
+New Mexico,2026-02-01,552
+Alaska,2026-02-01,188
+Georgia,2026-02-01,21
+Ohio,2026-02-01,197
+North Carolina,2026-02-01,1
+Washington,2026-02-01,464
+Arizona,2026-02-01,177
+Puerto Rico,2026-02-01,266
+District of Columbia,2026-02-01,70
+Maryland,2026-02-01,110
+Alberta,2026-02-01,777
+Manitoba,2026-02-01,116
+New Brunswick,2026-02-01,45
+Hawaii,2026-02-01,26
+Connecticut,2026-02-01,67
+Oregon,2026-02-01,693
+Vermont,2026-02-01,102
+Nova Scotia,2026-02-01,77
+Kentucky,2026-02-01,9
+Maine,2026-02-01,230
+Newfoundland and Labrador,2026-02-01,44
+North Dakota,2026-02-01,8
+Montana,2026-02-01,419
+Illinois,2026-02-01,266
+Arkansas,2026-02-01,37
+New Hampshire,2026-02-01,7
+British Columbia,2026-02-01,435
+New Jersey,2026-02-01,302
+West Virginia,2026-02-01,65
+Nevada,2026-02-01,117
+Rhode Island,2026-02-01,8
+Utah,2026-02-01,18
+Virginia,2026-02-01,23
+Yukon,2026-02-01,5
+Nunavut,2026-02-01,1
+Saskatchewan,2026-02-01,98
+Ontario,2026-02-01,1623
+Michigan,2026-02-01,773
+Missouri,2026-02-01,228
+Rhode Island,2026-03-01,8
+Nunavut,2026-03-01,1
+Yukon,2026-03-01,5
+Georgia,2026-03-01,21
+Iowa,2026-03-01,5
+Vermont,2026-03-01,102
+Connecticut,2026-03-01,67
+Colorado,2026-03-01,662
+New Jersey,2026-03-01,305
+Utah,2026-03-01,18
+Alaska,2026-03-01,188
+Missouri,2026-03-01,229
+North Dakota,2026-03-01,8
+Manitoba,2026-03-01,116
+Mississippi,2026-03-01,183
+Puerto Rico,2026-03-01,267
+Oklahoma,2026-03-01,1002
+Illinois,2026-03-01,267
+Delaware,2026-03-01,14
+New York,2026-03-01,653
+Newfoundland and Labrador,2026-03-01,44
+Texas,2026-03-01,13
+Saskatchewan,2026-03-01,98
+Arkansas,2026-03-01,37
+District of Columbia,2026-03-01,68
+Minnesota,2026-03-01,102
+Ohio,2026-03-01,201
+Louisiana,2026-03-01,28
+Virginia,2026-03-01,23
+Ontario,2026-03-01,1626
+Washington,2026-03-01,466
+Maryland,2026-03-01,111
+British Columbia,2026-03-01,438
+Arizona,2026-03-01,177
+New Hampshire,2026-03-01,7
+West Virginia,2026-03-01,65
+Nova Scotia,2026-03-01,77
+New Mexico,2026-03-01,553
+Oregon,2026-03-01,691
+Hawaii,2026-03-01,25
+Alberta,2026-03-01,782
+Montana,2026-03-01,419
+Maine,2026-03-01,233
+South Dakota,2026-03-01,68
+North Carolina,2026-03-01,1
+California,2026-03-01,1425
+Florida,2026-03-01,741
+Pennsylvania,2026-03-01,193
+Kentucky,2026-03-01,9
+Nevada,2026-03-01,117
+Michigan,2026-03-01,777
+Massachusetts,2026-03-01,421
+New Brunswick,2026-03-01,46
+Newfoundland and Labrador,2026-04-01,43
+Alberta,2026-04-01,775
+Georgia,2026-04-01,22
+Arizona,2026-04-01,177
+California,2026-04-01,1428
+Oklahoma,2026-04-01,998
+Ohio,2026-04-01,206
+Maine,2026-04-01,235
+Tennessee,2026-04-01,1
+Oregon,2026-04-01,691
+New York,2026-04-01,654
+Colorado,2026-04-01,661
+Hawaii,2026-04-01,25
+Utah,2026-04-01,18
+British Columbia,2026-04-01,433
+Louisiana,2026-04-01,28
+Montana,2026-04-01,420
+North Carolina,2026-04-01,1
+Florida,2026-04-01,745
+Rhode Island,2026-04-01,8
+Ontario,2026-04-01,1621
+Massachusetts,2026-04-01,423
+Mississippi,2026-04-01,183
+Arkansas,2026-04-01,37
+Nunavut,2026-04-01,1
+Michigan,2026-04-01,778
+New Mexico,2026-04-01,551
+Saskatchewan,2026-04-01,98
+Iowa,2026-04-01,5
+West Virginia,2026-04-01,65
+Nevada,2026-04-01,117
+Vermont,2026-04-01,103
+Delaware,2026-04-01,14
+Texas,2026-04-01,13
+New Hampshire,2026-04-01,7
+Missouri,2026-04-01,228
+Illinois,2026-04-01,269
+Nova Scotia,2026-04-01,77
+Minnesota,2026-04-01,107
+New Brunswick,2026-04-01,46
+Pennsylvania,2026-04-01,194
+Kentucky,2026-04-01,10
+Maryland,2026-04-01,114
+Alaska,2026-04-01,187
+Washington,2026-04-01,466
+Virginia,2026-04-01,23
+Manitoba,2026-04-01,115
+South Dakota,2026-04-01,68
+Connecticut,2026-04-01,68
+District of Columbia,2026-04-01,71
+Puerto Rico,2026-04-01,267
+New Jersey,2026-04-01,306
+North Dakota,2026-04-01,8
+Yukon,2026-04-01,5
+Mississippi,2026-05-01,182
+Rhode Island,2026-05-01,8
+Connecticut,2026-05-01,68
+Maine,2026-05-01,235
+West Virginia,2026-05-01,65
+Washington,2026-05-01,466
+North Carolina,2026-05-01,1
+Delaware,2026-05-01,14
+Montana,2026-05-01,418
+South Dakota,2026-05-01,68
+Texas,2026-05-01,13
+Oklahoma,2026-05-01,997
+Ontario,2026-05-01,1618
+New Hampshire,2026-05-01,7
+New Brunswick,2026-05-01,46
+Florida,2026-05-01,747
+Hawaii,2026-05-01,25
+Arkansas,2026-05-01,37
+Georgia,2026-05-01,22
+Maryland,2026-05-01,115
+Massachusetts,2026-05-01,421
+Alaska,2026-05-01,187
+Nunavut,2026-05-01,1
+Utah,2026-05-01,18
+Colorado,2026-05-01,657
+Manitoba,2026-05-01,115
+Minnesota,2026-05-01,107
+District of Columbia,2026-05-01,70
+Ohio,2026-05-01,206
+Louisiana,2026-05-01,28
+Yukon,2026-05-01,5
+Michigan,2026-05-01,776
+Saskatchewan,2026-05-01,98
+Iowa,2026-05-01,5
+Illinois,2026-05-01,269
+New Jersey,2026-05-01,304
+Virginia,2026-05-01,23
+Missouri,2026-05-01,228
+New York,2026-05-01,654
+Nova Scotia,2026-05-01,77
+Alberta,2026-05-01,775
+California,2026-05-01,1425
+New Mexico,2026-05-01,547
+Puerto Rico,2026-05-01,267
+Oregon,2026-05-01,691
+Pennsylvania,2026-05-01,195
+Tennessee,2026-05-01,1
+Vermont,2026-05-01,103
+Nevada,2026-05-01,117
+British Columbia,2026-05-01,433
+Arizona,2026-05-01,177
+Newfoundland and Labrador,2026-05-01,43
+Kentucky,2026-05-01,11
+North Dakota,2026-05-01,8

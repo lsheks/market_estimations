@@ -16,7 +16,8 @@ LEGALIZATION_DATES = {
     "Alaska": "2014-11-04", "Arizona": "2020-11-03", "Arkansas": "2016-11-08",
     "California": "2016-11-08", "Colorado": "2012-11-06", "Connecticut": "2021-06-22",
     "Delaware": "2023-04-23", "District of Columbia": "2020-11-04",
-    "Florida": "2016-11-08", "Hawaii": "2000-06-14", "Illinois": "2019-06-25",
+    "Florida": "2016-11-08", "Georgia": "2019-04-17", "Hawaii": "2000-06-14",
+    "Illinois": "2019-06-25", "Indiana": "2017-04-26",
     "Iowa": "2014-05-30", "Louisiana": "2015-06-29", "Maine": "2016-11-08",
     "Maryland": "2022-11-08", "Massachusetts": "2016-11-08", "Michigan": "2018-11-06",
     "Minnesota": "2023-05-30", "Mississippi": "2022-02-02", "Missouri": "2022-11-08",
@@ -26,7 +27,8 @@ LEGALIZATION_DATES = {
     "Oklahoma": "2018-06-26", "Oregon": "2014-11-04", "Pennsylvania": "2016-04-17",
     "Rhode Island": "2022-05-25", "South Dakota": "2020-11-03", "Utah": "2018-11-06",
     "Vermont": "2018-01-22", "Virginia": "2024-04-07", "Washington": "2012-11-06",
-    "West Virginia": "2017-04-19",
+    "West Virginia": "2017-04-19", "Wyoming": "2015-03-01",
+    "South Carolina": "2014-06-02",
 }
 
 REC_STATES = {
@@ -43,7 +45,7 @@ STATES_USE_GROWTH_MODEL = {
     "Virginia", "New York", "Connecticut", "Arizona", "Mississippi", "Ohio",
     "New Jersey", "Nevada", "Vermont", "Alaska", "South Dakota", "Arkansas",
     "West Virginia", "Illinois", "Oklahoma", "Washington", "Florida",
-    "Delaware", "New Hampshire",
+    "Delaware", "New Hampshire", "Georgia", "Iowa",
 }
 
 GROWTH_TRAINING_STATES = [
@@ -61,13 +63,14 @@ NO_MARKET_STATES = {"Texas", "Virginia"}
 
 ALL_MODEL_STATES = sorted([
     "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut",
-    "Delaware", "District of Columbia", "Florida", "Hawaii", "Illinois",
-    "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota",
-    "Mississippi", "Missouri", "Montana", "Nevada", "New Hampshire", "New Jersey",
-    "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma",
-    "Oregon", "Pennsylvania", "Rhode Island", "South Dakota", "Utah", "Vermont",
-    "Virginia", "Washington", "West Virginia", "Nebraska", "Tennessee", "Wisconsin",
-    "Alabama", "Kansas", "Idaho", "Kentucky", "Texas",
+    "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Illinois",
+    "Indiana", "Iowa", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan",
+    "Minnesota", "Mississippi", "Missouri", "Montana", "Nevada", "New Hampshire",
+    "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio",
+    "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina",
+    "South Dakota", "Utah", "Vermont", "Virginia", "Washington", "West Virginia",
+    "Nebraska", "Tennessee", "Wisconsin", "Alabama", "Kansas", "Idaho", "Kentucky",
+    "Texas", "Wyoming",
 ])
 
 GROWTH_FEATURE_COLS = [
@@ -78,13 +81,27 @@ GROWTH_FEATURE_COLS = [
 # Ramps from 0 at year 1 to full effect at year 5+.
 STORE_GROWTH_ELASTICITY = 0.35
 
+# Rec legalization adds a decaying annual growth bonus on top of the base model.
+# Year 1: +20%, Year 2: +11%, Year 3: +6%, Year 4: +3.3%, ... fades out ~year 5.
+REC_ANNUAL_BONUS  = 0.20   # extra growth rate in year 1 of rec
+REC_BONUS_DECAY   = 0.55   # bonus decays by ~45% each year
+
+# Med-only states: have a legalization date but not recreational.
+MED_STATES = set(LEGALIZATION_DATES.keys()) - REC_STATES
+
 # ── Data Loading ──────────────────────────────────────────────────────────────
+
+def _latest_file(pattern, fallback):
+    """Return the most recent file matching glob pattern, or fallback name."""
+    files = sorted(glob.glob(pattern))
+    return files[-1] if files else fallback
+
 
 @st.cache_data
 def load_base_data():
-    df_price = pd.read_csv("state_price_monthly.csv")
-    df_disp  = pd.read_csv("num_dispensaries_per_month.csv")
-    df_sales = pd.read_csv("state_sales_monthly.csv")
+    df_price = pd.read_csv(_latest_file("state-pricing-monthly_*.csv", "state_price_monthly.csv"))
+    df_disp  = pd.read_csv(_latest_file("num_dispensaries_per_month_*.csv", "num_dispensaries_per_month.csv"))
+    df_sales = pd.read_csv(_latest_file("state_sales_monthly_*.csv", "state_sales_monthly.csv"))
 
     df_price.columns = ["STATE", "SALES_MONTH", "STATE_PRICE"]
     df_disp.columns  = ["STATE", "SALES_MONTH", "COUNT_DISP"]
@@ -124,6 +141,11 @@ def load_base_data():
         df.groupby("STATE")["PRICE_CHANGE_YOY"]
         .rolling(3, min_periods=1).mean().reset_index(level=0, drop=True)
     )
+    # Replace infinities that arise from division by zero (e.g. price went from 0)
+    for col in ["STORE_GROWTH_RATE", "SALES_GROWTH_YOY", "PRICE_CHANGE_YOY",
+                "SALES_GROWTH_YOY_3MO", "PRICE_CHANGE_YOY_3MO"]:
+        df[col] = df[col].replace([np.inf, -np.inf], np.nan)
+
     df["PRICE_X_MATURITY"] = df["PRICE_CHANGE_YOY_3MO"] * df["YEARS_SINCE_LEGAL"]
 
     df["TARGET_GROWTH_YOY"] = (
@@ -197,8 +219,11 @@ def build_full_data(df_raw, df_demos_processed):
 @st.cache_data
 def train_growth_model(df_raw):
     df = df_raw[df_raw["SALES_MONTH"] > pd.to_datetime("2023-01-01")].copy()
-    df = df[df["TARGET_GROWTH_YOY"].between(-1, 2.5)]
+    # Cap at ±50% to exclude first-year market explosions that would inflate the intercept
+    df = df[df["TARGET_GROWTH_YOY"].between(-0.50, 0.50)]
     df = df[df["STATE"].isin(GROWTH_TRAINING_STATES)]
+    # Require at least 2 years of market history to avoid training on immature markets
+    df = df[df["YEARS_SINCE_LEGAL"] >= 2.0]
     df = df.dropna(subset=GROWTH_FEATURE_COLS + ["TARGET_GROWTH_YOY"])
     model = LinearRegression(fit_intercept=True)
     model.fit(df[GROWTH_FEATURE_COLS], df["TARGET_GROWTH_YOY"])
@@ -270,10 +295,23 @@ def project_growth_model(df_state, growth_model, params):
         else _safe(latest["PRICE_CHANGE_YOY_3MO"])
     )
     cur_years = _safe(latest["YEARS_SINCE_LEGAL"], fallback=5.0)
+    rec_conversion_date = params.get("rec_conversion_date")
+    rec_years_since = 0
 
     rows = []
     for i in range(1, params["years_forward"] + 1):
+        cur_date  = pd.Timestamp(f"{last_year + i}-01-01")
         cur_years += 1
+
+        is_rec_year = (rec_conversion_date is not None and
+                       cur_date.year == pd.Timestamp(rec_conversion_date).year)
+        is_post_rec = (rec_conversion_date is not None and
+                       cur_date >= pd.Timestamp(rec_conversion_date))
+        if is_rec_year:
+            rec_years_since = 1
+        elif is_post_rec:
+            rec_years_since += 1
+
         X = pd.DataFrame([{
             "PRICE_CHANGE_YOY_3MO": cur_price_change,
             "SALES_GROWTH_YOY_3MO": cur_sales_growth,
@@ -283,9 +321,12 @@ def project_growth_model(df_state, growth_model, params):
         pred_growth = float(growth_model.predict(X[GROWTH_FEATURE_COLS])[0])
 
         # Direct store growth effect: ramps from 0 at year 1 to full at year 5+.
-        # Ensures store growth is always neutral-to-positive, never a drag.
         maturity_weight = float(np.clip((cur_years - 1.0) / 4.0, 0.0, 1.0))
         pred_growth += max(0.0, cur_store_growth) * maturity_weight * STORE_GROWTH_ELASTICITY
+
+        # Decaying rec bonus: fades over ~5 years as the market comes online
+        if rec_years_since > 0:
+            pred_growth += REC_ANNUAL_BONUS * (REC_BONUS_DECAY ** (rec_years_since - 1))
 
         pred_growth = np.clip(pred_growth, params["growth_floor"], params["growth_cap"])
         cur_ttm     *= (1 + pred_growth)
@@ -333,6 +374,15 @@ def project_structural_model(state, df_state, structural_model, global_price_mea
         if pd.isna(avg_price_growth): avg_price_growth = 0.0
 
         future = latest.copy()
+        # Fill missing price with national average (e.g. states absent from price file)
+        if pd.isna(future.get("STATE_PRICE")):
+            future["STATE_PRICE"] = global_price_mean
+        # Fill missing demo columns from processed demos when the merge didn't populate them
+        if pd.isna(future.get("demo_demand_index")):
+            state_row = df_demos_processed[df_demos_processed["state"] == state]
+            if not state_row.empty:
+                future["demo_demand_index"] = float(state_row.iloc[0]["demo_demand_index"])
+                future["Total_pop"]         = float(state_row.iloc[0]["Total_pop"])
     else:
         state_row = df_demos_processed[df_demos_processed["state"] == state]
         if state_row.empty:
@@ -342,8 +392,9 @@ def project_structural_model(state, df_state, structural_model, global_price_mea
         cur_ttm   = 0.0
         avg_disp_growth  = 0.05
         avg_price_growth = -0.05
+        is_rec = 1 if state in REC_STATES else 0
         future = pd.Series({
-            "rec": 1, "years_rec": 0.0, "disp_per_hh": 0.0,
+            "rec": is_rec, "years_rec": 0.0, "disp_per_hh": 0.0,
             "STATE_PRICE": global_price_mean,
             "demo_demand_index": float(state_row.iloc[0]["demo_demand_index"]),
             "Total_pop":         float(state_row.iloc[0]["Total_pop"]),
@@ -351,30 +402,69 @@ def project_structural_model(state, df_state, structural_model, global_price_mea
         hist = None
 
     initial_disp  = float(future.get("disp_per_hh", 0.0))
+    # States with zero dispensary history (e.g. CBD-only) get a ramp-up like no-history states
+    use_disp_ramp = (initial_disp == 0.0)
     years_forward = max(params["years_forward"], 5) if not has_history else params["years_forward"]
+    rec_conversion_date = params.get("rec_conversion_date")
 
     rows = []
     for i in range(1, years_forward + 1):
-        if future.get("rec", 0) == 1:
+        cur_date    = pd.Timestamp(f"{last_year + i}-01-01")
+        is_rec_year = (rec_conversion_date is not None and
+                       cur_date.year == pd.Timestamp(rec_conversion_date).year)
+        is_post_rec = (rec_conversion_date is not None and
+                       cur_date >= pd.Timestamp(rec_conversion_date))
+
+        if is_rec_year:
+            future["rec"]       = 1
+            future["years_rec"] = 1.0
+        elif is_post_rec:
+            future["rec"]       = 1
+            future["years_rec"] = float(future.get("years_rec", 0.0)) + 1
+        elif future.get("rec", 0) == 1:
             future["years_rec"] = float(future.get("years_rec", 0.0)) + 1
         else:
             future["years_rec"] = 0.0
 
+        if use_disp_ramp:
+            # Only start building a market once legalization is in effect
+            if is_post_rec:
+                years_since_rec = i - (pd.Timestamp(rec_conversion_date).year - last_year)
+                ramp = 1 / (1 + np.exp(-0.8 * (years_since_rec - midpoint)))
+                future["disp_per_hh"] = ramp * disp_mean
+            else:
+                future["disp_per_hh"] = 0.0
+        elif has_history:
+            future["disp_per_hh"] *= (1 + avg_disp_growth)
+
         if has_history:
-            future["disp_per_hh"]  *= (1 + avg_disp_growth)
             if params["override_price"]:
                 future["STATE_PRICE"] *= (1 + params["price_trend"])
             else:
                 future["STATE_PRICE"] *= (1 + avg_price_growth)
         else:
-            ramp = 1 / (1 + np.exp(-0.8 * (i - midpoint)))
-            future["disp_per_hh"]  = initial_disp + ramp * (disp_mean - initial_disp)
-            future["STATE_PRICE"]  = float(future["STATE_PRICE"]) * 0.8 + global_price_mean * 0.2
+            future["STATE_PRICE"] = float(future["STATE_PRICE"]) * 0.8 + global_price_mean * 0.2
 
         trip_factor   = 1 / (1 + np.exp(-steepness * (float(future["years_rec"]) - midpoint)))
         disp_norm     = float(future["disp_per_hh"]) / disp_mean
         access_factor = disp_norm / (1 + disp_norm)
         price_factor  = np.clip(float(future["STATE_PRICE"]) / global_price_mean, 0.5, 1.5)
+
+        # For non-rec states with a future rec conversion, hold at $0 until that year
+        pre_rec_holdout = (
+            state not in REC_STATES and
+            rec_conversion_date is not None and
+            cur_date < pd.Timestamp(rec_conversion_date)
+        )
+        if pre_rec_holdout:
+            rows.append({
+                "DATE": cur_date,
+                "PROJECTED_TTM_TOTAL_SALES": 0.0,
+                "EXPECTED_TTM_TOTAL_SALES":  0.0,
+                "trip_factor": 0.0,
+                "years_rec":   0.0,
+            })
+            continue
 
         pred_raw = float(future["demo_demand_index"]) * trip_factor * access_factor * price_factor
         if pred_raw <= 0 or np.isnan(pred_raw):
@@ -382,6 +472,10 @@ def project_structural_model(state, df_state, structural_model, global_price_mea
 
         expected_pc    = np.exp(float(structural_model.predict([[np.log(pred_raw)]])[0]))
         expected_total = expected_pc * float(future["Total_pop"])
+
+        # At rec conversion year, reset baseline to 0 so ramp starts fresh
+        if is_rec_year and state not in REC_STATES:
+            cur_ttm = 0.0
 
         projected_total = (
             cur_ttm + adj_speed * (expected_total - cur_ttm)
@@ -475,7 +569,7 @@ def make_category_stacked_bar(state, df_cat, proj_g):
     # Complete years (Dec) give annual total = TTM ending Dec.
     # Partial current year gives TTM ending latest month (directly comparable to projections).
     annual = (
-        df_state[df_state["TTM"].notna() & (df_state["YEAR"] >= 2025)]
+        df_state[df_state["TTM"].notna() & (df_state["YEAR"] >= 2023)]
         .groupby(["YEAR", "CATEGORY_GROUP"])["TTM"]
         .last()
         .reset_index()
@@ -564,14 +658,14 @@ def make_structural_bar_chart(state, hist_s, proj_s):
         state not in NO_MARKET_STATES and
         hist_s is not None and not hist_s.empty and
         "TTM_TOTAL_SALES" in hist_s.columns and
-        hist_s["TTM_TOTAL_SALES"].notna().any()
+        hist_s["TTM_TOTAL_SALES"].fillna(0).gt(0).any()
     )
 
     if has_hist:
         # ── Historical TTM bars ───────────────────────────────────────────────
         h = hist_s.copy()
         h["YEAR"] = h["SALES_MONTH"].dt.year
-        h = h[h["TTM_TOTAL_SALES"].notna() & (h["YEAR"] >= 2025)]
+        h = h[h["TTM_TOTAL_SALES"].notna() & (h["YEAR"] >= 2023)]
         annual = h.groupby("YEAR")["TTM_TOTAL_SALES"].last().reset_index()
 
         latest_month = hist_s["SALES_MONTH"].max().month
@@ -610,9 +704,9 @@ def make_structural_bar_chart(state, hist_s, proj_s):
         xaxis_title = "Year"
 
     else:
-        # ── Unlegal state: projected only, labeled Year 1 / Year 2 / … ───────
+        # ── No-history state: projected only, labeled by calendar year ────────
         if proj_s is not None and not proj_s.empty:
-            x_proj = [f"Year {i+1}" for i in range(len(proj_s))]
+            x_proj = proj_s["DATE"].dt.year.astype(str).tolist()
             fig.add_trace(go.Bar(
                 x=x_proj, y=proj_s["PROJECTED_TTM_TOTAL_SALES"],
                 name="Projected",
@@ -621,7 +715,7 @@ def make_structural_bar_chart(state, hist_s, proj_s):
                 hovertemplate="<b>%{x} (proj TTM)</b>: $%{y:,.0f}<extra>Projected</extra>",
             ))
 
-        xaxis_title = "Years since full legalization"
+        xaxis_title = "Year"
 
     fig.update_layout(
         barmode="relative",
@@ -725,21 +819,26 @@ def compute_all_state_defaults(df_raw):
     Returns dict: state -> {price_trend_pct, store_growth_pct}.
     """
     cutoff = df_raw["SALES_MONTH"].max() - pd.DateOffset(months=12)
-    recent = df_raw[df_raw["SALES_MONTH"] > cutoff]
+    recent = df_raw[df_raw["SALES_MONTH"] > cutoff].copy()
+    # Replace infinities so they don't corrupt means
+    recent["PRICE_CHANGE_YOY"]  = recent["PRICE_CHANGE_YOY"].replace([np.inf, -np.inf], np.nan)
+    recent["STORE_GROWTH_RATE"] = recent["STORE_GROWTH_RATE"].replace([np.inf, -np.inf], np.nan)
 
     national_price = recent["PRICE_CHANGE_YOY"].mean()
     national_store = recent["STORE_GROWTH_RATE"].mean()
+    if pd.isna(national_price): national_price = 0.0
+    if pd.isna(national_store): national_store = 0.0
 
     result = {}
     for state in ALL_MODEL_STATES:
         rows = recent[recent["STATE"] == state]
         price = rows["PRICE_CHANGE_YOY"].mean()  if not rows.empty else national_price
         store = rows["STORE_GROWTH_RATE"].mean() if not rows.empty else national_store
-        if pd.isna(price): price = national_price
-        if pd.isna(store): store = national_store
+        if pd.isna(price) or not np.isfinite(price): price = national_price
+        if pd.isna(store) or not np.isfinite(store): store = national_store
         result[state] = {
-            "price_trend_pct":  int(np.clip(round(price * 100), -30, 20)),
-            "store_growth_pct": int(np.clip(round(store * 100), -20, 50)),
+            "price_trend_pct":  int(round(np.clip(price * 100, -30, 20))),
+            "store_growth_pct": int(round(np.clip(store * 100, -20, 50))),
         }
     return result
 
@@ -775,8 +874,40 @@ def render_sidebar(all_state_defaults):
                 st.session_state[k] = v
             st.session_state["_active_state"] = state
 
+        # Legalization status + rec scenario
+        leg_date = LEGALIZATION_DATES.get(state)
+        rec_conversion_date = None
+        # Default "Model rec?" to checked for states with no existing market
+        no_existing_market = state not in REC_STATES and state not in STATES_USE_GROWTH_MODEL
+        if state in REC_STATES:
+            st.caption(f"Recreational legal since **{leg_date}**")
+        elif leg_date:
+            today = date.today()
+            col_l, col_r = st.columns([3, 2])
+            col_l.caption(f"Medical only — legal since **{leg_date}**")
+            enable_rec = col_r.checkbox("Model rec?", key="enable_rec_conversion",
+                value=no_existing_market,
+                help="Simulate this state legalizing recreational cannabis.")
+            if enable_rec:
+                rec_year = st.selectbox("Rec legalization year",
+                    list(range(today.year + 1, today.year + 11)), key="rec_year")
+                rec_conversion_date = pd.Timestamp(f"{rec_year}-01-01")
+        else:
+            today = date.today()
+            col_l, col_r = st.columns([3, 2])
+            col_l.caption("No legal market")
+            enable_rec = col_r.checkbox("Model rec?", key="enable_rec_conversion",
+                value=no_existing_market,
+                help="Simulate this state legalizing recreational cannabis.")
+            if enable_rec:
+                rec_year = st.selectbox("Rec legalization year",
+                    list(range(today.year + 1, today.year + 11)), key="rec_year")
+                rec_conversion_date = pd.Timestamp(f"{rec_year}-01-01")
+
         auto_model = "Market Trend Model" if state in STATES_USE_GROWTH_MODEL else "Structural Demographic Model"
-        model_choice = st.radio("Model", ["Auto", "Market Trend Model", "Structural Demographic Model", "Both"])
+        radio_default = "Structural Demographic Model" if no_existing_market else "Auto"
+        model_choice = st.radio("Model", ["Auto", "Market Trend Model", "Structural Demographic Model", "Both"],
+                                index=["Auto", "Market Trend Model", "Structural Demographic Model", "Both"].index(radio_default))
         if model_choice == "Auto":
             st.caption(f"Auto-selected: **{auto_model}**")
             model_choice = auto_model
@@ -827,8 +958,28 @@ def render_sidebar(all_state_defaults):
         growth_floor=-0.20, growth_cap=0.30,
         adjustment_speed=adjustment_speed,
         scurve_midpoint=scurve_midpoint, scurve_steepness=scurve_steepness,
+        rec_conversion_date=rec_conversion_date,
     )
     return state, model_choice, params
+
+
+# ── Historical TTM snapshots ──────────────────────────────────────────────────
+
+@st.cache_data
+def compute_historical_ttm(_df_raw, years=(2023, 2024)):
+    """Return a DataFrame with STATE and one TTM column per requested year."""
+    df = _df_raw.sort_values(["STATE", "SALES_MONTH"]).copy()
+    df["TTM"] = (
+        df.groupby("STATE")["DOLLAR_SALES"]
+        .transform(lambda x: x.rolling(12, min_periods=12).sum())
+    )
+    frames = {}
+    for yr in years:
+        yr_data = df[(df["SALES_MONTH"].dt.year == yr) & df["TTM"].notna()]
+        frames[yr] = yr_data.groupby("STATE")["TTM"].last()
+    out = pd.DataFrame(frames).reset_index()
+    out.columns = ["State"] + [f"TTM {yr}" for yr in years]
+    return out
 
 
 # ── All-States Computation (cached on params) ─────────────────────────────────
@@ -1016,7 +1167,7 @@ def main():
             c2.metric("Avg proj'd growth", f"{proj_g['PRED_GROWTH'].mean():.1%}")
         elif model_choice == "Structural Demographic Model" and proj_s is not None and not proj_s.empty:
             ttm_vals = proj_s["PROJECTED_TTM_TOTAL_SALES"]
-            growth = ttm_vals.pct_change().mean()
+            growth = ttm_vals[ttm_vals > 0].pct_change().replace([np.inf, -np.inf], np.nan).mean()
             c1, c2 = st.columns(2)
             c1.metric(f"Structural Demographic {final_year}", fmt_dollars(ttm_vals.iloc[-1]))
             c2.metric("Avg proj'd growth", f"{growth:.1%}" if pd.notna(growth) else "—")
@@ -1026,10 +1177,10 @@ def main():
             cat_fig = make_category_stacked_bar(state, df_cat, proj_g)
             st.plotly_chart(cat_fig if cat_fig is not None else
                             make_structural_bar_chart(state, hist_g, proj_g),
-                            use_container_width=True)
+                            use_container_width=True, key="chart_main")
         elif model_choice == "Structural Demographic Model":
             st.plotly_chart(make_structural_bar_chart(state, hist_s, proj_s),
-                            use_container_width=True)
+                            use_container_width=True, key="chart_main")
         elif model_choice == "Both":
             cat_fig = make_category_stacked_bar(state, df_cat, proj_g) if df_cat is not None else None
             fig_left  = cat_fig if cat_fig is not None else make_structural_bar_chart(state, hist_g, proj_g)
@@ -1061,23 +1212,43 @@ def main():
 
             c_left, c_right = st.columns(2)
             with c_left:
-                st.plotly_chart(fig_left, use_container_width=True)
+                st.plotly_chart(fig_left, use_container_width=True, key="chart_left")
             with c_right:
-                st.plotly_chart(fig_right, use_container_width=True)
+                st.plotly_chart(fig_right, use_container_width=True, key="chart_right")
 
         with st.expander("Projection tables"):
             col_a, col_b = st.columns(2)
             if proj_g is not None and not proj_g.empty:
                 with col_a:
                     st.write("**Market Trend Model**")
-                    st.dataframe(
-                        proj_g.assign(
-                            DATE=proj_g["DATE"].dt.year,
-                            PROJECTED_TTM_SALES=proj_g["PROJECTED_TTM_SALES"].map("${:,.0f}".format),
-                            PRED_GROWTH=proj_g["PRED_GROWTH"].map("{:.1%}".format),
-                        ),
-                        hide_index=True,
-                    )
+                    tbl = proj_g[["DATE", "PROJECTED_TTM_SALES", "PRED_GROWTH"]].copy()
+                    # Add category breakout if available
+                    if df_cat is not None:
+                        df_state_cat = df_cat[df_cat["STATE"] == state].copy()
+                        df_state_cat = df_state_cat.sort_values(["CATEGORY_GROUP", "SALES_MONTH"])
+                        df_state_cat["TTM"] = (
+                            df_state_cat.groupby("CATEGORY_GROUP")["TOTAL_DOLLARS"]
+                            .transform(lambda x: x.rolling(12, min_periods=12).sum())
+                        )
+                        latest_ttm = (
+                            df_state_cat[df_state_cat["TTM"].notna()]
+                            .groupby("CATEGORY_GROUP")["TTM"].last()
+                        )
+                        total_latest = latest_ttm.sum()
+                        if total_latest > 0:
+                            cat_mix = (latest_ttm / total_latest).to_dict()
+                            for cat, mix in cat_mix.items():
+                                tbl[cat] = tbl["PROJECTED_TTM_SALES"] * mix
+                    # Format
+                    tbl["DATE"] = tbl["DATE"].dt.year
+                    tbl["PROJECTED_TTM_SALES"] = tbl["PROJECTED_TTM_SALES"].map("${:,.0f}".format)
+                    tbl["PRED_GROWTH"] = tbl["PRED_GROWTH"].map("{:.1%}".format)
+                    cat_cols_in_tbl = [c for c in tbl.columns if c not in ["DATE", "PROJECTED_TTM_SALES", "PRED_GROWTH"]]
+                    for c in cat_cols_in_tbl:
+                        tbl[c] = tbl[c].map("${:,.0f}".format)
+                    st.dataframe(tbl.rename(columns={
+                        "DATE": "Year", "PROJECTED_TTM_SALES": "Total TTM", "PRED_GROWTH": "Growth"
+                    }), hide_index=True)
             if proj_s is not None and not proj_s.empty:
                 with col_b:
                     st.write("**Structural Demographic Model**")
@@ -1096,7 +1267,11 @@ def main():
     with tab_all:
         st.subheader("All States Summary")
 
-        params_key = tuple(sorted(params.items()))
+        # Make params hashable for cache key (convert Timestamp to string)
+        params_key = tuple(sorted(
+            (k, str(v) if isinstance(v, pd.Timestamp) else v)
+            for k, v in params.items()
+        ))
         with st.spinner("Computing projections for all states…"):
             df_summary = compute_all_states(
                 df_raw, df_full, df_demos_processed,
@@ -1104,28 +1279,80 @@ def main():
                 global_price_mean, disp_mean,
                 params_key,
             )
+            df_hist_ttm = compute_historical_ttm(df_raw)
+            df_summary = df_summary.merge(df_hist_ttm, on="State", how="left")
 
         final_year = date.today().year + params["years_forward"]
 
-        total = df_summary["Selected"].sum(skipna=True)
-        st.metric(f"Total US Market — {final_year}", f"${total/1e9:.1f}B")
+        # State filter
+        selected_states = st.multiselect(
+            "Filter to specific states (leave blank to show all)",
+            options=sorted(df_summary["State"].tolist()),
+            default=[],
+        )
+        df_filtered = (
+            df_summary[df_summary["State"].isin(selected_states)]
+            if selected_states else df_summary
+        )
+
+        total = df_filtered["Selected"].sum(skipna=True)
+        market_label = (
+            f"{len(selected_states)} Selected States — {final_year}"
+            if selected_states else f"Total US Market — {final_year}"
+        )
+        st.metric(market_label, f"${total/1e9:.1f}B")
 
         st.plotly_chart(
-            make_all_states_chart(df_summary, "Selected"),
+            make_all_states_chart(df_filtered, "Selected"),
             use_container_width=True,
         )
 
-        df_display = df_summary.sort_values("Selected", ascending=False, na_position="last").copy()
-        for c in ["Market Trend Model", "Structural Demographic Model", "Selected"]:
-            df_display[c] = df_display[c].apply(fmt_dollars)
+        df_display = df_filtered.sort_values("Selected", ascending=False, na_position="last").copy()
+        for c in ["Market Trend Model", "Structural Demographic Model", "Selected", "TTM 2023", "TTM 2024"]:
+            if c in df_display.columns:
+                df_display[c] = df_display[c].apply(fmt_dollars)
         df_display = df_display.rename(columns={
             "Market Trend Model": f"Market Trend ({final_year})",
             "Structural Demographic Model": f"Structural Demographic ({final_year})",
-            "Selected":     f"Selected ({final_year})",
+            "Selected": f"Selected ({final_year})",
         })
-        st.dataframe(df_display, use_container_width=True, hide_index=True)
+        # Reorder: State, Model, historical, projected
+        col_order = (
+            ["State", "Model", "TTM 2023", "TTM 2024"]
+            + [c for c in df_display.columns if str(final_year) in c]
+        )
+        col_order = [c for c in col_order if c in df_display.columns]
+        st.dataframe(df_display[col_order], use_container_width=True, hide_index=True)
 
-        csv = df_summary.to_csv(index=False).encode()
+        # Build download CSV — add category breakout where available
+        df_download = df_filtered.copy()
+        if df_cat is not None:
+            df_cat_ttm = df_cat.sort_values(["STATE", "CATEGORY_GROUP", "SALES_MONTH"]).copy()
+            df_cat_ttm["TTM"] = (
+                df_cat_ttm.groupby(["STATE", "CATEGORY_GROUP"])["TOTAL_DOLLARS"]
+                .transform(lambda x: x.rolling(12, min_periods=12).sum())
+            )
+            latest_mix = (
+                df_cat_ttm[df_cat_ttm["TTM"].notna()]
+                .groupby(["STATE", "CATEGORY_GROUP"])["TTM"].last()
+                .reset_index()
+            )
+            state_totals = latest_mix.groupby("STATE")["TTM"].sum()
+            latest_mix["MIX"] = latest_mix["TTM"] / latest_mix["STATE"].map(state_totals)
+            mix_pivot = latest_mix.pivot_table(
+                index="STATE", columns="CATEGORY_GROUP", values="MIX"
+            ).reset_index()
+            mix_pivot.columns.name = None
+
+            df_download = df_download.merge(
+                mix_pivot, left_on="State", right_on="STATE", how="left"
+            ).drop(columns=["STATE"], errors="ignore")
+            cat_cols = [c for c in mix_pivot.columns if c != "STATE"]
+            for cat in cat_cols:
+                df_download[f"{cat} (proj)"] = df_download["Selected"] * df_download[cat]
+                df_download = df_download.drop(columns=[cat])
+
+        csv = df_download.to_csv(index=False).encode()
         st.download_button("Download projections CSV", csv,
                            f"market_projections_{date.today()}.csv", "text/csv")
 
